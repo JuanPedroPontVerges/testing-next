@@ -5,7 +5,7 @@ import LogoFooter from 'public/logo.png'
 
 const Layout: React.FC<any> = (props) => {
     return (
-        <div>
+        <div className="h-screen w-screen">
             <nav className={"flex flex-row justify-between items-center w-screen px-4 shadow-xl"}>
                 <div>
                     <Image src={LogoCacao} alt='Cacao' width={200} height={140} />
@@ -19,11 +19,11 @@ const Layout: React.FC<any> = (props) => {
             <main>
                 {props.children}
             </main>
-            <footer className="p-4 bg-white sm:p-6 dark:bg-gray-900 w-full fixed bottom-0 ">
+            <footer className="p-4 bg-white sm:p-6 dark:bg-gray-900 w-full bottom-0 ">
                 <div className="md:flex md:justify-between">
                     <div className="mb-6 md:mb-0">
                         <a href="https://cacao.to/" className="flex items-center">
-                            <Image src={LogoFooter} width={119} height={83} />
+                            <Image src={LogoFooter} width={119} height={83} alt={'Logo footer'} />
                         </a>
                     </div>
                     <div className="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
@@ -31,10 +31,10 @@ const Layout: React.FC<any> = (props) => {
                             <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Servicios</h2>
                             <ul className="text-gray-600 dark:text-gray-400">
                                 <li className="mb-4">
-                                    <a href="https://flowbite.com/" className="hover:underline">Flowbite</a>
+                                    <a href="#" className="hover:underline">Encuestas</a>
                                 </li>
                                 <li>
-                                    <a href="https://tailwindcss.com/" className="hover:underline">Tailwind CSS</a>
+                                    <a href="#" className="hover:underline">Whatsapp</a>
                                 </li>
                             </ul>
                         </div>
@@ -42,10 +42,7 @@ const Layout: React.FC<any> = (props) => {
                             <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Follow us</h2>
                             <ul className="text-gray-600 dark:text-gray-400">
                                 <li className="mb-4">
-                                    <a href="https://github.com/themesberg/flowbite" className="hover:underline ">Github</a>
-                                </li>
-                                <li>
-                                    <a href="https://discord.gg/4eeurUVvTy" className="hover:underline">Discord</a>
+                                    <a href="https://github.com/JuanPedroPontVerges" className="hover:underline ">Linkedin</a>
                                 </li>
                             </ul>
                         </div>
