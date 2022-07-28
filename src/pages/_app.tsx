@@ -1,9 +1,15 @@
+import '../styles/globals.css'
 import { withTRPC } from '@trpc/next';
 import { AppType } from 'next/dist/shared/lib/utils';
 import type { AppRouter } from '@/backend/router';
+import Layout from '@/components/Layout';
 
 const MyApp: AppType = ({ Component, pageProps }) => {
-  return <Component {...pageProps} />;
+  return (
+    <Layout>
+      <Component {...pageProps} />
+    </Layout>
+  );
 };
 
 export default withTRPC<AppRouter>({
