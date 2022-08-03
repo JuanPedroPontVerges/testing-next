@@ -3,12 +3,15 @@ import { withTRPC } from '@trpc/next';
 import { AppType } from 'next/dist/shared/lib/utils';
 import type { AppRouter } from '@/backend/router';
 import Layout from '@/components/Layout';
+import Head from 'next/head';
 
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </>
   );
 };
 

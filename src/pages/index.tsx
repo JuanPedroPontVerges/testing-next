@@ -6,7 +6,6 @@ import Dasboard from 'public/dashboard.png'
 import Iphones from 'public/iphones.png'
 
 const Home: NextPage = () => {
-  const { data, isLoading } = trpc.useQuery(["hello", { name: 'Juan Pedro' }]);
   return (
     <div className='flex flex-col gap-y-14'>
       <div className={'lg:px-60 sm:px-20  bg-[#27253B]'}>
@@ -43,7 +42,7 @@ const Home: NextPage = () => {
                 comercio necesita
               </span>
               <br />
-              <span className='text-[#F88600] '>
+              <span className='text-[#F88600]'>
                 para incrementar
                 <br />
                 ventas
