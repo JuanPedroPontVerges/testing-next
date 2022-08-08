@@ -58,25 +58,25 @@ const Home: NextPage = () => {
         </div>
       </div>
       { /* Flag */}
-      <div className='p-2 bg-[#F88600] rounded-r-lg w-1/12'>
-        <div className={''}>Con Cacao podés</div>
+      <div className='p-2 bg-[#F88600] rounded-r-lg w-2/12'>
+        <div className={'ml-4'}>Con Cacao podés</div>
       </div>
       <div className={'flex flex-row justify-around items-center text-black text-2xl'}>
-        <div className={'actions-container basis-1/2'}>
+        <div className={'basis-1/3 text-center'}>
           <Image src={Marketing} alt={'Campañas'} />
-          <p className='w-2/4'>
+          <p className='w-2/4 mx-auto'>
             Realizar publicidad dirigida
           </p>
         </div>
-        <div className={'actions-container basis-1/2'}>
+        <div className={'basis-1/3 text-center'}>
           <Image src={People} alt={'Campañas'} />
-          <p className='w-2/4'>
+          <p className='w-2/4 mx-auto'>
             Llevar un control del personal y de los estándares de la marca
           </p>
         </div>
-        <div className={'actions-container basis-1/2'}>
+        <div className={'basis-1/3 text-center'}>
           <Image src={GoogleReviews} alt={'Campañas'} />
-          <p className='w-2/4'>
+          <p className='w-2/4 mx-auto'>
             Gestionar las críticas negativas y aumentar las positivas
           </p>
         </div>
