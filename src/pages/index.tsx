@@ -7,6 +7,9 @@ import Iphones from 'public/iphones.png'
 import Marketing from 'public/marketing.png'
 import People from 'public/people.png'
 import GoogleReviews from 'public/google-reviews.png'
+import Encuestas from 'public/encuestas.png'
+import Title from '@/components/Title';
+import Button from '@/components/Button';
 
 const Home: NextPage = () => {
   return (
@@ -52,33 +55,60 @@ const Home: NextPage = () => {
               </span>
             </h2>
             <div>
-              <button className={'rounded-lg p-4 px-10 text-white bg-[#F88600] font-bold'}>¡Pedí tu prueba!</button>
+              <Button>
+                ¡Pedí tu prueba!
+              </Button>
             </div>
           </div>
         </div>
       </div>
       { /* Flag */}
-      <div className='p-2 bg-[#F88600] rounded-r-lg w-2/12'>
-        <div className={'ml-4'}>Con Cacao podés</div>
+      <div className='p-4 bg-[#F88600] rounded-r-full w-2/12'>
+        <div className={'ml-4 text-4xl font-bold'}>Con Cacao podés</div>
       </div>
       <div className={'flex flex-row justify-around items-center text-black text-2xl'}>
         <div className={'basis-1/3 text-center'}>
-          <Image src={Marketing} alt={'Campañas'} />
+          <Image src={Marketing} alt={'Campañas'} width={249} />
           <p className='w-2/4 mx-auto'>
-            Realizar publicidad dirigida
+            <span className='mr-10'>
+              Realizar publicidad dirigida
+            </span>
           </p>
         </div>
         <div className={'basis-1/3 text-center'}>
-          <Image src={People} alt={'Campañas'} />
+          <Image src={People} alt={'Campañas'} width={262} />
           <p className='w-2/4 mx-auto'>
             Llevar un control del personal y de los estándares de la marca
           </p>
         </div>
         <div className={'basis-1/3 text-center'}>
-          <Image src={GoogleReviews} alt={'Campañas'} />
+          <Image src={GoogleReviews} alt={'Campañas'} width={293} />
           <p className='w-2/4 mx-auto'>
             Gestionar las críticas negativas y aumentar las positivas
           </p>
+        </div>
+      </div>
+      { /* Encuestas*/}
+      <div className={'flex lg:px-60 sm:px-20 justify-around'}>
+        <div className='basis-2/3'>
+          <Image src={Encuestas} alt={'Lugares por el cual acceder a la encuesta'} />
+        </div>
+        <div className='text-right basis-1/3'>
+          <div className='flex flex-col justify-center h-full'>
+            <div className='flex flex-col justify-around h-2/3 '>
+              <div className=''>
+                <Title title='Encuestas' color={'#F88600'} />
+              </div>
+              <div className=''>
+                <p className={'text-3xl text-black'}>
+                  Tus clientes acceden a una <strong>breve encuesta</strong> donde evalúan su <strong>experiencia</strong> y, a cambio, obtienen un <strong> beneficio para utilizar en su próxima compra.</strong>
+                </p>
+              </div>
+              <div className={'text-center'} >
+                <Button>Ver encuesta</Button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
