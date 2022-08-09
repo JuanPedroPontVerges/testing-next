@@ -7,10 +7,10 @@ const Layout: React.FC<any> = (props) => {
     return (
         <div className="h-screen w-full">
             <nav className={"flex flex-row justify-between items-center px-4 shadow-xl bg-[#27253B]"}>
-                <div>
+                <div className="px-2">
                     <Image src={LogoCacao} alt='Cacao' width={200} height={140} />
                 </div>
-                <div className="flex flex-row list-none gap-20 pr-20">
+                <div className="flex flex-row list-none gap-20 pr-20 text-2xl font-medium">
                     <li>Inicio</li>
                     <li>Sobre Nosotros</li>
                     <li>Contacto</li>

@@ -1,12 +1,12 @@
 import React from "react"
 interface TitleComponentProps {
-    title: string;
+    children: any;
     color: string;
     className?: string;
 }
-const Title: React.FC<TitleComponentProps> = ({ title, color, className }) => {
+const Title: React.FC<TitleComponentProps> = ({ color, className, children }) => {
     return (
-        <h3 className={`font-semibold text-[${color}] text-6xl font-extrabold ${className}`}>{title}</h3>
+        <h3 className={`font-semibold text-[${color}] text-6xl font-black ${className}`}>{children}</h3>
     )
 }
 
