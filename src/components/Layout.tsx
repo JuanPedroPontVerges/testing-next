@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react"
 import LogoCacao from 'public/logo-cacao.png'
 import LogoFooter from 'public/logo.png'
+import Link from "next/link";
 
 const Layout: React.FC<any> = (props) => {
     return (
@@ -11,9 +12,15 @@ const Layout: React.FC<any> = (props) => {
                     <Image src={LogoCacao} alt='Cacao' width={200} height={140} />
                 </div>
                 <div className="flex flex-row list-none gap-20 pr-20 text-2xl font-medium">
-                    <li>Inicio</li>
-                    <li>Sobre Nosotros</li>
-                    <li>Contacto</li>
+                    <Link href="/">
+                        <li className="cursor-pointer">Inicio</li>
+                    </Link>
+                    <Link href={"/about-us"}>
+                        <li className="cursor-pointer">Sobre Nosotros</li>
+                    </Link>
+                    <Link href={"contact"}>
+                        <li className="cursor-pointer">Contacto</li>
+                    </Link>
                 </div>
             </nav>
             <main className="w-full">

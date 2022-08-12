@@ -13,6 +13,7 @@ import VideoPreview from 'public/preview-video.png';
 import WhatsappScreens from 'public/pantallas-whatsapp.png';
 import Macbook from 'public/macbook.png';
 import HumanInCircle from 'public/persona-en-circulo.png';
+import MotorcycleInCircle from 'public/moto-en-circulo.png';
 import TrendingArrow from 'public/flecha-tendencia.png';
 /* Components */
 import Title from '@/components/Title';
@@ -134,6 +135,7 @@ const Home: NextPage = () => {
             <p className={'text-3xl text-black text-[32px] font-light'}>
               Diferentes opciones, adaptables a tus necesidades.
             </p>
+            <div className={'pb-1'} />
             <Image src={GoogleReviewsYellow} alt={'Logo de Google Reviews'} />
             <p className={'text-3xl text-[#717171] text-[32px] font-extrabold'}>
               Mejorá las reseñas de Google Reviews
@@ -197,27 +199,28 @@ const Home: NextPage = () => {
               Tendrás acceso a un panel de control, dónde podrás ver:
             </p>
           </div>
-          <div className={'flex flex-row justify-around'}>
+          <div className={'flex flex-row justify-around font-semibold'}>
             <div className={'text-center'}>
               <Image src={HumanInCircle} alt={'persona en un circulo, icono'} />
               <p className='text-[#353535]'>Clientes Frecuentes</p>
             </div>
             <div className={'text-center'}>
-              <Image src={HumanInCircle} alt={'persona en un circulo, icono'} />
-              <p className='text-[#353535]'>Clientes Frecuentes</p>
+              <Image src={MotorcycleInCircle} alt={'persona en un circulo, icono'} />
+              <p className='text-[#353535]'>Valoración de tus servicios</p>
             </div>
             <div className={'text-center'}>
               <Image src={HumanInCircle} alt={'persona en un circulo, icono'} />
-              <p className='text-[#353535]'>Clientes Frecuentes</p>
+              <p className='text-[#353535]'>Comparación por sucursal</p>
             </div>
             <div className={'text-center'}>
               <Image src={TrendingArrow} alt={'persona en un circulo, icono'} />
-              <p className='text-[#353535]'>Clientes Frecuentes</p>
+              <p className='text-[#353535]'>Analisis de datos</p>
             </div>
           </div>
         </div>
       </div>
-    </div>
+      {/* Carrousel */}
+    </div >
   )
 }
 

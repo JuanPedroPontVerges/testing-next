@@ -9,6 +9,7 @@ module.exports = {
             backgroundImage: {
                 'completed-tasks': "url('/tareas-completas.png')",
                 'pink-decoration': "url('/decoracion-rosa.png')",
+                'about-us-banner': "url('/about-us-banner.png')",
             }
         }
     },
