@@ -7,3 +7,9 @@ body {
   font-family: "Roboto", sans-serif;
   overscroll-behavior-y: none;
 }
+
+.carousel-indicators button {
+  width: 11px !important;
+  height: 11px !important;
+  border-radius: 100%;
+}

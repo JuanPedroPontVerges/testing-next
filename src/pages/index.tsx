@@ -1,5 +1,6 @@
 import type { NextPage } from 'next'
 import Image from 'next/image';
+import { Carousel } from 'react-bootstrap';
 /* Images */
 import Dasboard from 'public/dashboard.png'
 import Iphones from 'public/iphones.png'
@@ -15,11 +16,31 @@ import Macbook from 'public/macbook.png';
 import HumanInCircle from 'public/persona-en-circulo.png';
 import MotorcycleInCircle from 'public/moto-en-circulo.png';
 import TrendingArrow from 'public/flecha-tendencia.png';
+import YellowStore from 'public/tienda-amarilla.png';
+import HandWithCoin from 'public/mano-con-moneda.png';
+import Community from 'public/comunidad.png';
 /* Components */
 import Title from '@/components/Title';
 import Button from '@/components/Button';
 
 const Home: NextPage = () => {
+  const responsive = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3,
+      slidesToSlide: 3 // optional, default to 1.
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+      slidesToSlide: 2 // optional, default to 1.
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+      slidesToSlide: 1 // optional, default to 1.
+    }
+  };
   return (
     <div className='flex flex-col gap-y-14'>
       <div className={'lg:px-54 sm:px-20  bg-[#27253B]'}>
@@ -72,7 +93,7 @@ const Home: NextPage = () => {
       </div>
       { /* Flag */}
       <div className='flex flex-row justify-between items-start'>
-        <div className='p-4 bg-[#F88600] rounded-r-full w-2/12'>
+        <div className='p-4 bg-[#F88600] rounded-r-full w-3/12'>
           <div className={'ml-4 text-4xl font-bold'}>Con Cacao podés</div>
         </div>
         <div>
@@ -209,7 +230,7 @@ const Home: NextPage = () => {
               <p className='text-[#353535]'>Valoración de tus servicios</p>
             </div>
             <div className={'text-center'}>
-              <Image src={HumanInCircle} alt={'persona en un circulo, icono'} />
+              <Image src={YellowStore} alt={'persona en un circulo, icono'} />
               <p className='text-[#353535]'>Comparación por sucursal</p>
             </div>
             <div className={'text-center'}>
@@ -220,6 +241,33 @@ const Home: NextPage = () => {
         </div>
       </div>
       {/* Carrousel */}
+      <div className={'flex flex-row bg-[#27253B]'}>
+        <div className={'basis-2/3'}>
+          <Carousel controls={false}>
+            <Carousel.Item>
+              <div className='flex flex-col items-center justify-center h-[500px]'>
+                <Image src={HandWithCoin} alt={'Mano con moneda'} />
+                <h3 className={'mt-4 text-[28px] font-medium text-center'}>Elegí tus beneficios</h3>
+              </div>
+            </Carousel.Item>
+            <Carousel.Item>
+              <div className='flex flex-col items-center justify-center h-[500px]'>
+                <Image src={Community} alt={'Comunidad cacao'} />
+                <h3 className={'mt-4 text-[28px] font-medium text-center'}>Conocé a tus clientes</h3>
+              </div>
+            </Carousel.Item>
+            </Carousel>
+        </div>   
+        <div className={'basis-1/3 flex flex-col justify-around'}>
+          <h2 className={'text-[#F88600] font-black text-6xl'}>
+            Cualquier tipo de comercio
+          </h2>
+          <p className={'text-2xl'}>
+            Nos adaptamos a cualquier tipo de comercio. Con Cacao,
+            <strong> tu cliente con vos.</strong>
+          </p>
+        </div>
+      </div>
     </div >
   )
 }

@@ -1,9 +1,9 @@
+import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/globals.css'
 import { withTRPC } from '@trpc/next';
 import { AppType } from 'next/dist/shared/lib/utils';
 import type { AppRouter } from '@/backend/router';
 import Layout from '@/components/Layout';
-import Head from 'next/head';
 
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
