@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import Image from 'next/image';
 import { Carousel } from 'react-bootstrap';
 /* Images */
+import Twittter from 'public/twitter.png';
 import Dasboard from 'public/dashboard.png'
 import Iphones from 'public/iphones.png'
 import Marketing from 'public/marketing.png'
@@ -22,6 +23,7 @@ import Community from 'public/comunidad.png';
 /* Components */
 import Title from '@/components/Title';
 import Button from '@/components/Button';
+import Line from '@/components/Line';
 
 const Home: NextPage = () => {
   const responsive = {
@@ -243,7 +245,7 @@ const Home: NextPage = () => {
       {/* Carrousel */}
       <div className={'flex flex-row bg-[#27253B]'}>
         <div className={'basis-2/3'}>
-          <Carousel controls={false}>
+          <Carousel controls={false} interval={2500} draggable>
             <Carousel.Item>
               <div className='flex flex-col items-center justify-center h-[500px]'>
                 <Image src={HandWithCoin} alt={'Mano con moneda'} />
@@ -256,19 +258,103 @@ const Home: NextPage = () => {
                 <h3 className={'mt-4 text-[28px] font-medium text-center'}>Conocé a tus clientes</h3>
               </div>
             </Carousel.Item>
-            </Carousel>
-        </div>   
+          </Carousel>
+        </div>
         <div className={'basis-1/3 flex flex-col justify-around'}>
           <h2 className={'text-[#F88600] font-black text-6xl'}>
-            Cualquier tipo de comercio
+            Cualquier <br /> tipo de <br /> comercio
           </h2>
           <p className={'text-2xl'}>
-            Nos adaptamos a cualquier tipo de comercio. Con Cacao,
+            Nos adaptamos a cualquier <br /> tipo de comercio. Con Cacao, <br />
             <strong> tu cliente con vos.</strong>
           </p>
         </div>
       </div>
-    </div >
+      {/* Carrousel customers */}
+      <div className={'flex flex-col bg-[#ECF7FF] p-6'}>
+        <div>
+          <h3 className={'font-regular text-4xl text-center text-[#343252]'}>Algunos de nuestros <strong>clientes</strong></h3>
+        </div>
+        <div>
+          <Carousel controls={false} interval={2500} draggable>
+            <Carousel.Item>
+              <div className='flex flex-col items-center justify-center h-[500px] text-black'>
+                <Image src={Twittter} alt={'Mano con moneda'} />
+                <h3 className={'mt-4 text-[28px] font-medium text-center'}>Elegí tus beneficios</h3>
+              </div>
+            </Carousel.Item>
+            <Carousel.Item>
+              <div className='flex flex-col items-center justify-center h-[500px] text-black'>
+                <Image src={Twittter} alt={'Comunidad cacao'} />
+                <h3 className={'mt-4 text-[28px] font-medium text-center'}>Conocé a tus clientes</h3>
+              </div>
+            </Carousel.Item>
+          </Carousel>
+        </div>
+      </div>
+      {/* Pricing */}
+      <div className={'flex flex-col bg-[#27253B] p-8'}>
+        <div>
+          <h3 className={'font-black text-5xl text-center text-white'}>Hasta $4999 al mes</h3>
+        </div>
+        <div className='p-8' />
+        <div className={'mx-auto'}>
+          <Line className='w-[500px] border-4 border-[#F08619]/[.30]' />
+        </div>
+        <div>
+          <Carousel controls={false} interval={2500} draggable>
+            <Carousel.Item>
+              <div className='flex flex-col items-center justify-center h-[500px] text-black'>
+                <Image src={Twittter} alt={'Mano con moneda'} />
+                <h3 className={'mt-4 text-[28px] font-medium text-center'}>Elegí tus beneficios</h3>
+              </div>
+            </Carousel.Item>
+            <Carousel.Item>
+              <div className='flex flex-col items-center justify-center h-[500px] text-black'>
+                <Image src={Twittter} alt={'Comunidad cacao'} />
+                <h3 className={'mt-4 text-[28px] font-medium text-center'}>Conocé a tus clientes</h3>
+              </div>
+            </Carousel.Item>
+          </Carousel>
+        </div>
+        <div className='text-center'>
+          <h3 className={'font-black text-3xl'}>1 mes de garantia</h3>
+          <div className='p-4' />
+          <Button>¡Pedí tu prueba!</Button>
+        </div>
+      </div>
+      {/* Form */}
+      <div className={'flex flex-col bg-[#27253B] p-8'}>
+        <div>
+          <h3 className={'font-black text-5xl text-center text-white'}>¿Listo para hacer crecer tu comercio? ¡Contactanos!</h3>
+        </div>
+        <div className='p-8' />
+        <div className={'mx-auto'}>
+          <Line className='w-[500px] border-4 border-[#F08619]/[.30]' />
+        </div>
+        <div>
+          <Carousel controls={false} interval={2500} draggable>
+            <Carousel.Item>
+              <div className='flex flex-col items-center justify-center h-[500px] text-black'>
+                <Image src={Twittter} alt={'Mano con moneda'} />
+                <h3 className={'mt-4 text-[28px] font-medium text-center'}>Elegí tus beneficios</h3>
+              </div>
+            </Carousel.Item>
+            <Carousel.Item>
+              <div className='flex flex-col items-center justify-center h-[500px] text-black'>
+                <Image src={Twittter} alt={'Comunidad cacao'} />
+                <h3 className={'mt-4 text-[28px] font-medium text-center'}>Conocé a tus clientes</h3>
+              </div>
+            </Carousel.Item>
+          </Carousel>
+        </div>
+        <div className='text-center'>
+          <h3 className={'font-black text-3xl'}>1 mes de garantia</h3>
+          <div className='p-4' />
+          <Button>¡Pedí tu prueba!</Button>
+        </div>
+      </div>
+    </div>
   )
 }
 
