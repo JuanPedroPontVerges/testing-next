@@ -24,6 +24,9 @@ import Community from 'public/comunidad.png';
 import Title from '@/components/Title';
 import Button from '@/components/Button';
 import Line from '@/components/Line';
+import Input from '@/components/Input';
+import Select from '@/components/Select';
+import TextArea from '@/components/TextArea';
 
 const Home: NextPage = () => {
   const responsive = {
@@ -44,7 +47,7 @@ const Home: NextPage = () => {
     }
   };
   return (
-    <div className='flex flex-col gap-y-14'>
+    <div className='flex flex-col'>
       <div className={'lg:px-54 sm:px-20  bg-[#27253B]'}>
         {/* Banner */}
         <div className='flex flex-row justify-between'>
@@ -65,6 +68,7 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
+      <div className='p-4' />
       <div className={'lg:px-60 sm:px-20  bg-white'}>
         {/* Request your demo */}
         <div className='flex flex-row justify-between'>
@@ -93,6 +97,7 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
+      <div className='p-4' />
       { /* Flag */}
       <div className='flex flex-row justify-between items-start'>
         <div className='p-4 bg-[#F88600] rounded-r-full w-3/12'>
@@ -124,6 +129,7 @@ const Home: NextPage = () => {
           </p>
         </div>
       </div>
+      <div className='p-4' />
       { /* Encuestas*/}
       <div className={'flex lg:px-60 sm:px-20 justify-around bg-completed-tasks bg-no-repeat bg-left-bottom'}>
         <div className='basis-2/3'>
@@ -242,6 +248,7 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
+      <div className='p-4' />
       {/* Carrousel */}
       <div className={'flex flex-row bg-[#27253B]'}>
         <div className={'basis-2/3'}>
@@ -272,8 +279,9 @@ const Home: NextPage = () => {
       </div>
       {/* Carrousel customers */}
       <div className={'flex flex-col bg-[#ECF7FF] p-6'}>
+        <div className='p-4' />
         <div>
-          <h3 className={'font-regular text-4xl text-center text-[#343252]'}>Algunos de nuestros <strong>clientes</strong></h3>
+          <h3 className={'font-regular text-4xl text-center text-[#343252]'}>Algunos de nuestros <strong className='font-black'>clientes</strong></h3>
         </div>
         <div>
           <Carousel controls={false} interval={2500} draggable>
@@ -295,6 +303,7 @@ const Home: NextPage = () => {
       {/* Pricing */}
       <div className={'flex flex-col bg-[#27253B] p-8'}>
         <div>
+          <div className='p-4' />
           <h3 className={'font-black text-5xl text-center text-white'}>Hasta $4999 al mes</h3>
         </div>
         <div className='p-8' />
@@ -304,19 +313,23 @@ const Home: NextPage = () => {
         <div>
           <Carousel controls={false} interval={2500} draggable>
             <Carousel.Item>
-              <div className='flex flex-col items-center justify-center h-[500px] text-black'>
-                <Image src={Twittter} alt={'Mano con moneda'} />
-                <h3 className={'mt-4 text-[28px] font-medium text-center'}>Elegí tus beneficios</h3>
+              <div className='flex flex-col items-center justify-center h-40'>
+                <h3 className={'mt-4 text-[28px] font-medium text-center'}>Encuestas</h3>
               </div>
             </Carousel.Item>
             <Carousel.Item>
-              <div className='flex flex-col items-center justify-center h-[500px] text-black'>
-                <Image src={Twittter} alt={'Comunidad cacao'} />
-                <h3 className={'mt-4 text-[28px] font-medium text-center'}>Conocé a tus clientes</h3>
+              <div className='flex flex-col items-center justify-center h-40'>
+                <h3 className={'mt-4 text-[28px] font-medium text-center'}>Códigos QR</h3>
+              </div>
+            </Carousel.Item>
+            <Carousel.Item>
+              <div className='flex flex-col items-center justify-center h-40'>
+                <h3 className={'mt-4 text-[28px] font-medium text-center'}>Métricas</h3>
               </div>
             </Carousel.Item>
           </Carousel>
         </div>
+        <div className={'p-4'} />
         <div className='text-center'>
           <h3 className={'font-black text-3xl'}>1 mes de garantia</h3>
           <div className='p-4' />
@@ -324,35 +337,67 @@ const Home: NextPage = () => {
         </div>
       </div>
       {/* Form */}
-      <div className={'flex flex-col bg-[#27253B] p-8'}>
-        <div>
-          <h3 className={'font-black text-5xl text-center text-white'}>¿Listo para hacer crecer tu comercio? ¡Contactanos!</h3>
+      <div className={'flex flex-col p-8 bg-form bg-no-repeat bg-cover'}>
+        <div className='p-4'>
+          <h3 className={'font-bold text-[40px] text-center text-[#343434]'}>¿Listo para hacer crecer tu comercio? <span className={'text-[#F88600]'}>¡Contactanos!</span></h3>
         </div>
         <div className='p-8' />
-        <div className={'mx-auto'}>
-          <Line className='w-[500px] border-4 border-[#F08619]/[.30]' />
-        </div>
-        <div>
-          <Carousel controls={false} interval={2500} draggable>
-            <Carousel.Item>
-              <div className='flex flex-col items-center justify-center h-[500px] text-black'>
-                <Image src={Twittter} alt={'Mano con moneda'} />
-                <h3 className={'mt-4 text-[28px] font-medium text-center'}>Elegí tus beneficios</h3>
+        <form action="" className={'flex flex-col items-center text-black'}>
+          <div className={'w-1/2'}>
+            {/* Datos de Contacto */}
+            <div>
+              <h4 className='text-[#343434] font-bold text-2xl'>Datos de contacto</h4>
+            </div>
+            <div className={'p-1'} />
+            <div>
+              <Input placeholder='Nombre y Apellido' />
+            </div>
+            <div className={'p-3'} />
+            <div className='flex flex-row justify-between gap-4'>
+              <div>
+                <Input placeholder='Nombre y Apellido' />
               </div>
-            </Carousel.Item>
-            <Carousel.Item>
-              <div className='flex flex-col items-center justify-center h-[500px] text-black'>
-                <Image src={Twittter} alt={'Comunidad cacao'} />
-                <h3 className={'mt-4 text-[28px] font-medium text-center'}>Conocé a tus clientes</h3>
+              <div>
+                <Input placeholder='Nombre y Apellido' />
               </div>
-            </Carousel.Item>
-          </Carousel>
-        </div>
-        <div className='text-center'>
-          <h3 className={'font-black text-3xl'}>1 mes de garantia</h3>
-          <div className='p-4' />
-          <Button>¡Pedí tu prueba!</Button>
-        </div>
+              <div className={'basis-1/2'}>
+                <Input placeholder='Nombre y Apellido' />
+              </div>
+            </div>
+            {/* Datos del Comercio */}
+            <div className={'p-3'} />
+            <div>
+              <h4 className='text-[#343434] font-bold text-2xl'>Datos del comercio</h4>
+            </div>
+            <div className={'p-1'} />
+            <div>
+              <Input placeholder='Nombre y Apellido' />
+            </div>
+            {/* Ubicación */}
+            <div className={'p-3'} />
+            <div className='flex flex-row'>
+              <div className={'basis-1/2'}>
+                <h4 className='text-[#343434] font-bold text-lg'>Argentina</h4>
+                <Select options={[{ label: 'Argentina', value: 'Córdoba' }]} />
+              </div>
+              <div className={'p-2'} />
+              <div className={'basis-1/2'}>
+                <h4 className='text-[#343434] font-bold text-lg'>Provincia</h4>
+                <Select options={[{ label: 'Córdoba', value: 'Córdoba' }]} />
+              </div>
+            </div>
+            {/* Consulta */}
+            <div className={'p-3'} />
+            <div>
+              <h4 className='text-[#343434] font-bold text-2xl'>Consulta</h4>
+            </div>
+            <div>
+              <TextArea placeholder='Mensaje' rows={10} />
+            </div>
+            <div className={'p-3'} />
+            <button className={'w-full bg-[#F88600] font-bold text-white p-2 rounded-[30px] drop-shadow-[0px_4px_4px_rgba(0,0,0,0.25)]'}>Enviar</button>
+          </div>
+        </form>
       </div>
     </div>
   )

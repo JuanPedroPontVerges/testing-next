@@ -13,3 +13,7 @@ body {
   height: 11px !important;
   border-radius: 100%;
 }
+
+.carousel-indicators {
+  margin: -4px;
+}
