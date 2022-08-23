@@ -145,20 +145,20 @@ const Home: NextPage = () => {
       </div>
       <div className='py-10' />
       {/* Google Reviews */}
-      <div className={'flex justify-around lg:pr-60 sm:pr-20'}>
+      <div className={'flex justify-around px-20 md:pr-20 lg:pr-60'}>
         <div className='basis-2/3'>
-          <div className='flex flex-col items-center space-y-16'>
+          <div className='flex flex-col items-center space-y-4 md:space-y-16'>
             <div>
               <Title color={'#F88600'}>
                 Encuesta customizable
               </Title>
             </div>
-            <p className={'text-3xl text-black text-[32px] font-light'}>
+            <p className={'text-3xl text-black text-[32px] text-center font-light'}>
               Diferentes opciones, adaptables a tus necesidades.
             </p>
             <div className={'pb-1'} />
             <Image src={GoogleReviewsYellow} alt={'Logo de Google Reviews'} />
-            <p className={'text-3xl text-[#717171] text-[32px] font-extrabold'}>
+            <p className={'text-3xl text-[#717171] text-[32px] font-extrabold text-center'}>
               Mejorá las reseñas de Google Reviews
             </p>
           </div>
