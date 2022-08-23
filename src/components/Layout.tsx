@@ -7,9 +7,21 @@ import ScrollToTop from "./ScrollToTop";
 
 const Layout: React.FC<any> = (props) => {
     return (
-        <div className="h-screen w-full">
-            <nav className={"flex flex-row justify-between items-center px-4 shadow-xl bg-[#27253B]"}>
-                <div className="px-2">
+        <div className="h-screen w-[100vh] md:w-full">
+            {/* Mobile nav */}
+            <nav className={"md:hidden flex flex-row justify-between items-center px-4 drop-shadow-2xl fixed top-0 z-50 bg-[#27253B]"}>
+                <div>
+                    <Image src={LogoCacao} alt='Cacao' width={200} height={140} />
+                </div>
+                <div className="space-y-2">
+                    <div className="w-14 h-2 bg-white rounded-md" />
+                    <div className="w-14 h-2 bg-white rounded-md" />
+                    <div className="w-14 h-2 bg-white rounded-md" />
+                </div>
+            </nav>
+            {/* Desktop nav */}
+            <nav className={"hidden md:flex flex-row justify-between items-center px-0 md:px-4 shadow-xl bg-[#27253B]"}>
+                <div className="px-0 md:px-2">
                     <Image src={LogoCacao} alt='Cacao' width={200} height={140} />
                 </div>
                 <div className="flex flex-row list-none gap-20 pr-20 text-2xl font-medium">
@@ -25,10 +37,11 @@ const Layout: React.FC<any> = (props) => {
                 </div>
             </nav>
             <main className="w-full">
+                <div className="py-12" />
                 {props.children}
             </main>
             <ScrollToTop />
-            <footer className="p-4 bg-[#F1F1F1] sm:p-6 text-black w-full">
+            <footer className="p-6 md:p-4 bg-[#F1F1F1] text-black w-full">
                 <div className="md:flex md:justify-between">
                     <div className="mb-6 md:mb-0">
                         <a href="https://cacao.to/" className="flex items-center">
