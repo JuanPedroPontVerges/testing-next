@@ -9,7 +9,7 @@ const Layout: React.FC<any> = (props) => {
     return (
         <div className="h-screen w-[100vh] md:w-full">
             {/* Mobile nav */}
-            <nav className={"md:hidden flex flex-row justify-between items-center px-4 drop-shadow-2xl fixed top-0 z-50 bg-[#27253B]"}>
+            <nav className={"md:hidden w-full flex flex-row justify-between items-center px-4 drop-shadow-2xl fixed top-0 z-50 bg-[#27253B]"}>
                 <div>
                     <Image src={LogoCacao} alt='Cacao' width={200} height={140} />
                 </div>
