@@ -3,6 +3,7 @@ import React from "react"
 import LogoCacao from 'public/logo-cacao.png'
 import LogoFooter from 'public/logo.png'
 import Link from "next/link";
+import ScrollToTop from "./ScrollToTop";
 
 const Layout: React.FC<any> = (props) => {
     return (
@@ -26,6 +27,7 @@ const Layout: React.FC<any> = (props) => {
             <main className="w-full">
                 {props.children}
             </main>
+            <ScrollToTop />
             <footer className="p-4 bg-[#F1F1F1] sm:p-6 text-black w-full">
                 <div className="md:flex md:justify-between">
                     <div className="mb-6 md:mb-0">
