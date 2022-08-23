@@ -27,6 +27,7 @@ import Line from '@/components/Line';
 import Input from '@/components/Input';
 import Select from '@/components/Select';
 import TextArea from '@/components/TextArea';
+import ResponsiveLineBreak from '@/components/ResponsiveLineBreak';
 
 const Home: NextPage = () => {
   return (
@@ -37,7 +38,7 @@ const Home: NextPage = () => {
           <div className={"flex flex-col pt-20"}>
             <div>
               <h1 className={"uppercase font-bold text-2xl"}>Plataforma web para
-                <br />vendedores
+                <ResponsiveLineBreak /> vendedores
               </h1>
             </div>
             <div>
@@ -52,7 +53,7 @@ const Home: NextPage = () => {
         </div>
       </div>
       <div className='p-4' />
-      <div className={'lg:px-60 sm:px-20  bg-white'}>
+      <div className={'lg:px-60 px-20  bg-white'}>
         {/* Request your demo */}
         <div className='flex flex-row justify-between'>
           <div className='basis-1/2'>
@@ -61,14 +62,14 @@ const Home: NextPage = () => {
           <div className='basis-1/2 flex flex-col items-center gap-y-32'>
             <h2 className='text-6xl font-extrabold text-right'>
               <span className='text-[#27253B]'>
-                Todo lo que tu
-                <br />
-                comercio necesita
+                Todo lo que tu{' '}
+                <ResponsiveLineBreak />
+                comercio necesita{' '}
               </span>
-              <br />
+              <ResponsiveLineBreak />
               <span className='text-[#F88600]'>
-                para incrementar
-                <br />
+                para incrementar {' '}
+                <ResponsiveLineBreak />
                 ventas
               </span>
             </h2>
@@ -83,7 +84,7 @@ const Home: NextPage = () => {
       <div className='p-4' />
       { /* Flag */}
       <div className='flex flex-row justify-between items-start'>
-        <div className='p-4 bg-[#F88600] rounded-r-full w-3/12'>
+        <div className='p-3 md:p-4 bg-[#F88600] rounded-r-full md:w-3/12 w-5/12'>
           <div className={'ml-4 text-4xl font-bold'}>Con Cacao podés</div>
         </div>
         <div>
@@ -91,23 +92,31 @@ const Home: NextPage = () => {
         </div>
       </div>
       <div className={'flex flex-row justify-around items-center text-black text-2xl'}>
-        <div className={'basis-1/3 text-center'}>
+        <div className={'basis-1/3 text-center mx-auto'}>
           <Image src={Marketing} alt={'Campañas'} width={249} />
-          <p className='w-2/4 mx-auto'>
-            <span className='mr-10'>
+        </div>
+        <div className={'basis-1/3 text-center'}>
+          <Image src={People} alt={'Campañas'} width={262} />
+        </div>
+        <div className={'basis-1/3 text-center'}>
+          <Image src={GoogleReviews} alt={'Campañas'} width={293} />
+        </div>
+      </div>
+      <div className={'flex flex-row justify-around items-center text-black text-2xl'}>
+        <div className={'basis-1/3 text-center mx-auto'}>
+          <p className='md:w-2/4'>
+            <span className='md:mr-10'>
               Realizar publicidad dirigida
             </span>
           </p>
         </div>
         <div className={'basis-1/3 text-center'}>
-          <Image src={People} alt={'Campañas'} width={262} />
-          <p className='w-2/4 mx-auto'>
+          <p className='md:w-2/4 mx-auto'>
             Llevar un control del personal y de los estándares de la marca
           </p>
         </div>
         <div className={'basis-1/3 text-center'}>
-          <Image src={GoogleReviews} alt={'Campañas'} width={293} />
-          <p className='w-2/4 mx-auto'>
+          <p className='md:w-2/4 mx-auto'>
             Gestionar las críticas negativas y aumentar las positivas
           </p>
         </div>
@@ -115,10 +124,10 @@ const Home: NextPage = () => {
       <div className='p-4' />
       { /* Encuestas*/}
       <div className={'flex lg:px-60 sm:px-20 justify-around bg-completed-tasks bg-no-repeat bg-left-bottom'}>
-        <div className='basis-2/3'>
+        <div className='basis-1/2 md:basis-2/3'>
           <Image src={Encuestas} alt={'Lugares por el cual acceder a la encuesta'} />
         </div>
-        <div className='text-right basis-1/3'>
+        <div className='text-right basis-1/2 md:basis-1/3'>
           <div className='flex flex-col justify-center h-full'>
             <div className='flex flex-col justify-around h-2/3'>
               <Title color={'#F88600'}>

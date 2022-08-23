@@ -37,7 +37,7 @@ const Layout: React.FC<any> = (props) => {
                 </div>
             </nav>
             <main className="w-full">
-                <div className="py-12" />
+                <div className="py-12 md:py-0" />
                 {props.children}
             </main>
             <ScrollToTop />
