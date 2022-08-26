@@ -1,14 +1,17 @@
 import type { NextPage } from 'next'
 import Image from 'next/image';
+import emailjs from 'emailjs-com';
+import ReCAPTCHA from "react-google-recaptcha";
 import { Carousel } from 'react-bootstrap';
+import { useEffect, useState } from 'react';
 /* Images */
+import Dasboard from 'public/dashboard.svg'
 import Twittter from 'public/twitter.png';
-import Dasboard from 'public/dashboard.png'
 import Iphones from 'public/iphones.png'
-import Marketing from 'public/marketing.png'
-import People from 'public/people.png'
-import GoogleReviews from 'public/google-reviews.png'
-import Encuestas from 'public/encuestas.png'
+import Marketing from 'public/marketing.svg'
+import People from 'public/people.svg'
+import GoogleReviews from 'public/google-reviews.svg'
+import Encuestas from 'public/encuestas.svg'
 import TiltedPhone from 'public/celular-inclinado.png'
 import GoogleReviewsYellow from 'public/google-reviews-yellow.png'
 import VideoPreview from 'public/preview-video.png';
@@ -28,8 +31,93 @@ import Input from '@/components/Input';
 import Select from '@/components/Select';
 import TextArea from '@/components/TextArea';
 import ResponsiveLineBreak from '@/components/ResponsiveLineBreak';
+import FormErrorMessage from '@/components/FormErrorMessage';
 
 const Home: NextPage = () => {
+  /* States */
+  const [isSendFormButtonDisabled, setIsFormButtonDisabled] = useState(true);
+  const [errorMessage, setErrorMessage] = useState<string>();
+  const [errors, setErrors] = useState<{
+    name?: string;
+    email?: string;
+    restaurant?: string;
+    message?: string;
+  }>();
+  const [okMessage, setOkMessage] = useState<string>();
+  const [emailError, setEmailError] = useState<string>();
+  // const location = useLocation();
+  /* Use Effect */
+  useEffect(() => {
+    emailjs.init("Vt494UNJrzrVcdNqg")
+  }, [])
+
+  useEffect(() => {
+    console.log('errors', errors);
+  }, [errors])
+  /* Private Functions */
+  const checkValidity = (inputName: string, inputValue: string) => {
+    switch (inputName) {
+      case "email":
+        let pattern = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/;
+        return pattern.test(inputValue);
+      case "name":
+        return inputValue.length > 0;
+      case "restaurant":
+        return inputValue.length > 0;
+      case "message":
+        return inputValue.length > 0;
+      default:
+        return true;
+    }
+  };
+  const sendEmail = (e: any) => {
+    console.log('e', e);
+    e.preventDefault();
+    let error = false;
+    for (let i of e.target) {
+      if (!checkValidity(i.name, i.value)) {
+        error = true;
+        setErrors((prevValue) => {
+          return {
+            ...prevValue,
+            [i.name]: 'Porfavor complete el campo!',
+          }
+        })
+        let element = document.getElementById(i.name)
+        element?.classList.add("is-invalid");
+      }
+      else {
+        if (i.name) {
+          document.getElementById(i.name)?.classList?.remove("is-invalid");
+        }
+      }
+    }
+    // Define error message
+    if (error) {
+      setErrorMessage('Error!');
+    }
+    else {
+      // Send the email
+      emailjs.sendForm('service_6qhzoqo', 'template_ywqehmy', e.target)
+        .then((result) => {
+          for (let field of e.target) {
+            let element = document.getElementById(field.name);
+            if (element != null) {
+              // element.value = ""; Commenting for now because it throws error
+            }
+            setOkMessage('¡Enviado con Éxito!');
+          }
+        },
+          (error) => {
+            setEmailError('error!');
+          });
+    }
+  }
+  const onChange = (value: any) => {
+    if (value) setIsFormButtonDisabled(false);
+    else setIsFormButtonDisabled(true);
+  }
+
   return (
     <div className='flex flex-col'>
       <div className={'lg:px-54 sm:px-20  bg-[#27253B]'}>
@@ -103,11 +191,9 @@ const Home: NextPage = () => {
         </div>
       </div>
       <div className={'flex flex-row justify-around items-center text-black text-2xl'}>
-        <div className={'basis-1/3 text-center mx-auto'}>
-          <p className='md:w-2/4'>
-            <span className='md:mr-10'>
-              Realizar publicidad dirigida
-            </span>
+        <div className={'basis-1/3 text-center md:pr-20'}>
+          <p className='md:w-2/4 mx-auto'>
+            Realizar publicidad dirigida
           </p>
         </div>
         <div className={'basis-1/3 text-center'}>
@@ -137,7 +223,7 @@ const Home: NextPage = () => {
                 Tus clientes acceden a una <strong>breve encuesta</strong> donde evalúan su <strong>experiencia</strong> y, a cambio, obtienen un <strong> beneficio para utilizar en su próxima compra.</strong>
               </p>
               <div className={'text-center'} >
-                <Button>Ver encuesta</Button>
+                <Button type={'submit'} id={'send'}>Ver encuesta</Button>
               </div>
             </div>
           </div>
@@ -145,25 +231,27 @@ const Home: NextPage = () => {
       </div>
       <div className='py-10' />
       {/* Google Reviews */}
-      <div className={'flex justify-around px-20 md:pr-20 lg:pr-60'}>
-        <div className='basis-2/3'>
-          <div className='flex flex-col items-center space-y-4 md:space-y-16'>
+      <div className={'flex justify-around px-20 md:pr-10'}>
+        <div className='md:basis-2/4'>
+          <div className='flex flex-col items-center md:items-start space-y-4 md:space-y-6'>
             <div>
               <Title color={'#F88600'}>
                 Encuesta customizable
               </Title>
             </div>
-            <p className={'text-3xl text-black text-[32px] text-center font-light'}>
+            <p className={'text-3xl text-black text-[32px] sm:text-center md:text-left font-light'}>
               Diferentes opciones, adaptables a tus necesidades.
             </p>
             <div className={'pb-1'} />
-            <Image src={GoogleReviewsYellow} alt={'Logo de Google Reviews'} />
-            <p className={'text-3xl text-[#717171] text-[32px] font-extrabold text-center'}>
+            <div className={'md:m-auto'}>
+              <Image src={GoogleReviewsYellow} alt={'Logo de Google Reviews'} />
+            </div>
+            <p className={'text-3xl text-[#717171] text-[32px] font-extrabold text-center md:text-left'}>
               Mejorá las reseñas de Google Reviews
             </p>
           </div>
         </div>
-        <div className='basis-1/3 flex flex-col items-center space-y-8'>
+        <div className='hidden md:flex basis-2/4 flex-col items-center space-y-8'>
           <Image src={VideoPreview} alt={'Preview de video'} />
           <div className='text-center'>
             <Button>
@@ -334,7 +422,7 @@ const Home: NextPage = () => {
           <h3 className={'font-bold text-[40px] text-center text-[#343434]'}>¿Listo para hacer crecer tu comercio? <span className={'text-[#F88600]'}>¡Contactanos!</span></h3>
         </div>
         <div className='p-8' />
-        <form action="" className={'flex flex-col items-center text-black'}>
+        <form onSubmit={sendEmail} className={'flex flex-col items-center text-black'}>
           <div className={'w-1/2'}>
             {/* Datos de Contacto */}
             <div>
@@ -342,18 +430,24 @@ const Home: NextPage = () => {
             </div>
             <div className={'p-1'} />
             <div>
-              <Input placeholder='Nombre y Apellido' />
+              <Input name={'name'} placeholder='Nombre y Apellido' />
+              <FormErrorMessage>
+                {errors?.name}
+              </FormErrorMessage>
             </div>
             <div className={'p-3'} />
             <div className='flex flex-row justify-between gap-4'>
               <div>
-                <Input placeholder='Nombre y Apellido' />
+                <Input name={'cp'} placeholder='Cód.área' />
               </div>
               <div>
-                <Input placeholder='Nombre y Apellido' />
+                <Input name={'phone'} placeholder='Teléfono' />
               </div>
               <div className={'basis-1/2'}>
-                <Input placeholder='Nombre y Apellido' />
+                <Input name={'email'} placeholder='Correo eletrónico' />
+                <FormErrorMessage>
+                  {errors?.email}
+                </FormErrorMessage>
               </div>
             </div>
             {/* Datos del Comercio */}
@@ -363,31 +457,50 @@ const Home: NextPage = () => {
             </div>
             <div className={'p-1'} />
             <div>
-              <Input placeholder='Nombre y Apellido' />
-            </div>
-            {/* Ubicación */}
-            <div className={'p-3'} />
-            <div className='flex flex-row'>
-              <div className={'basis-1/2'}>
-                <h4 className='text-[#343434] font-bold text-lg'>Argentina</h4>
-                <Select options={[{ label: 'Argentina', value: 'Córdoba' }]} />
+              <Input name={'restaurant'} placeholder='Nombre de la empresa' />
+              <FormErrorMessage>
+                {errors?.restaurant}
+              </FormErrorMessage>
+              {/* Ubicación */}
+              <div className={'p-3'} />
+              <div className='flex flex-row'>
+                <div className={'basis-1/2'}>
+                  <h4 className='text-[#343434] font-bold text-lg'>Argentina</h4>
+                  <Select name={'country'} options={[{ label: 'Argentina', value: 'Argentina' }]} />
+                </div>
+                <div className={'p-2'} />
+                <div className={'basis-1/2'}>
+                  <h4 className='text-[#343434] font-bold text-lg'>Provincia</h4>
+                  <Select name={'locality'} options={[{ label: 'Córdoba', value: 'Córdoba' }]} />
+                </div>
               </div>
-              <div className={'p-2'} />
-              <div className={'basis-1/2'}>
-                <h4 className='text-[#343434] font-bold text-lg'>Provincia</h4>
-                <Select options={[{ label: 'Córdoba', value: 'Córdoba' }]} />
+              {/* Consulta */}
+              <div className={'p-3'} />
+              <div>
+                <h4 className='text-[#343434] font-bold text-2xl'>Consulta</h4>
               </div>
+              <div>
+                <TextArea name={'message'} placeholder='Mensaje' rows={10} />
+                <FormErrorMessage>
+                  {errors?.message}
+                </FormErrorMessage>
+              </div>
+              <div className="font-bold text-green-600 font-3xl text-left pb-2">
+                {okMessage}
+              </div>
+              <ReCAPTCHA
+                sitekey="6Ld1AVogAAAAAMQ_WhUMhPkUmyqDYR7fD_zcG6QS"
+                onChange={onChange}
+                className="recaptcha"
+                id="captcha"
+              />
+              <div className="error-msg">
+                {emailError}
+                {errorMessage}
+              </div>
+              <div className={'p-3'} />
+              <button disabled={isSendFormButtonDisabled} className={`w-full transition-colors ${isSendFormButtonDisabled ? 'bg-gray-400' : 'bg-[#F88600]'} font-bold text-white p-2 rounded-[30px] drop-shadow-[0px_4px_4px_rgba(0,0,0,0.25)]`}>Enviar</button>
             </div>
-            {/* Consulta */}
-            <div className={'p-3'} />
-            <div>
-              <h4 className='text-[#343434] font-bold text-2xl'>Consulta</h4>
-            </div>
-            <div>
-              <TextArea placeholder='Mensaje' rows={10} />
-            </div>
-            <div className={'p-3'} />
-            <button className={'w-full bg-[#F88600] font-bold text-white p-2 rounded-[30px] drop-shadow-[0px_4px_4px_rgba(0,0,0,0.25)]'}>Enviar</button>
           </div>
         </form>
       </div>
