@@ -11,7 +11,10 @@ module.exports = {
                 'pink-decoration': "url('/decoracion-rosa.png')",
                 'about-us-banner': "url('/about-us-banner.png')",
                 'form': "url('/fondo-form.png')",
-            }
+            },
+            colors: {
+                'aboutUs': 'rgba(52, 50, 82, 0.5)',
+            },
         }
     },
     plugins: [],

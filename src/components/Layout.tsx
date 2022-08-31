@@ -4,38 +4,15 @@ import LogoCacao from 'public/logo-cacao.png'
 import LogoFooter from 'public/logo.png'
 import Link from "next/link";
 import ScrollToTop from "./ScrollToTop";
+import Nav from '@/components/Nav';
 
 const Layout: React.FC<any> = (props) => {
     return (
         <div className="h-screen w-[100vh] md:w-full">
             {/* Mobile nav */}
-            <nav className={"md:hidden w-full flex flex-row justify-between items-center px-4 drop-shadow-2xl fixed top-0 z-50 bg-[#27253B]"}>
-                <div>
-                    <Image src={LogoCacao} alt='Cacao' width={200} height={140} />
-                </div>
-                <div className="space-y-2">
-                    <div className="w-14 h-2 bg-white rounded-md" />
-                    <div className="w-14 h-2 bg-white rounded-md" />
-                    <div className="w-14 h-2 bg-white rounded-md" />
-                </div>
-            </nav>
+            <Nav mobile />
             {/* Desktop nav */}
-            <nav className={"hidden md:flex flex-row justify-between items-center px-0 md:px-4 shadow-xl bg-[#27253B]"}>
-                <div className="px-0 md:px-2">
-                    <Image src={LogoCacao} alt='Cacao' width={200} height={140} />
-                </div>
-                <div className="flex flex-row list-none gap-20 pr-20 text-2xl font-medium">
-                    <Link href="/">
-                        <li className="cursor-pointer">Inicio</li>
-                    </Link>
-                    <Link href={"/about-us"}>
-                        <li className="cursor-pointer">Sobre Nosotros</li>
-                    </Link>
-                    <Link href={"contact"}>
-                        <li className="cursor-pointer">Contacto</li>
-                    </Link>
-                </div>
-            </nav>
+            <Nav />
             <main className="w-full">
                 <div className="py-12 md:py-0" />
                 {props.children}

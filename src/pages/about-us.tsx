@@ -8,7 +8,12 @@ import Lightbulb from 'public/lightbulb.png';
 import Team from 'public/team.png';
 import TeamIcon from 'public/equipo.svg';
 // Team Members
-import JuanPedro from 'public/juan-pedro.png';
+import JuanPedro from 'public/juan-pedro.svg';
+import Augusto from 'public/augustus.svg';
+import Emilio from 'public/emilio.svg';
+import Paula from 'public/paula.svg';
+import Ramiro from 'public/ramiro.svg';
+import Luciana from 'public/luciana.svg';
 /* Components */
 import TeamMemberCard from "@/components/TeamMemberCard";
 
@@ -21,12 +26,12 @@ const AboutUs: NextPage = () => {
                 </div>
             </div>
             <div className={'py-20'} />
-            <div className={'flex justify-around align-middle lg:pr-60 sm:pr-20'}>
+            <div className={'flex justify-around align-middle lg:pr-60 pr-20'}>
                 <div className='basis-2/3 flex flex-col items-center justify-center'>
                     <Image src={Puzzle} alt={'Icono de rompecabezas'} />
                 </div>
                 <div className='text-left basis-1/3 flex flex-col justify-around gap-20'>
-                    <h3 className="text-[#343252]/50 text-4xl">
+                    <h3 className="text-aboutUs text-4xl">
                         WIN-WIN
                     </h3>
                     <h2 className={'text-6xl font-black text-[#27253B]'}>
@@ -38,9 +43,9 @@ const AboutUs: NextPage = () => {
                 </div>
             </div>
             <div className={'py-20'} />
-            <div className={'flex justify-around align-middle lg:pl-60 sm:pl-20'}>
+            <div className={'flex justify-around align-middle lg:pl-60 pl-20'}>
                 <div className='text-left basis-1/3 flex flex-col justify-around gap-20'>
-                    <h3 className="text-[#343252]/50 text-4xl">
+                    <h3 className="text-aboutUs text-4xl">
                         HIGH FIVE
                     </h3>
                     <h2 className={'text-6xl font-black text-[#27253B]'}>
@@ -55,12 +60,12 @@ const AboutUs: NextPage = () => {
                 </div>
             </div>
             <div className={'py-20'} />
-            <div className={'flex justify-around align-middle lg:pr-60 sm:pr-20'}>
+            <div className={'flex justify-around align-middle lg:pr-60 pr-20'}>
                 <div className='basis-2/3 flex flex-col items-center justify-center'>
                     <Image src={Improvement} alt={'Icono de mejora'} />
                 </div>
                 <div className='text-left basis-1/3 flex flex-col justify-around gap-20'>
-                    <h3 className="text-[#343252]/50 text-4xl">
+                    <h3 className="text-aboutUs text-4xl">
                         EFICACIA Y EFICIENCIA
                     </h3>
                     <h2 className={'text-6xl font-black text-[#27253B]'}>
@@ -83,12 +88,12 @@ const AboutUs: NextPage = () => {
                 </div>
             </div>
             <div className={'py-10'} />
-            <div className={'flex justify-around align-middle lg:pl-60 sm:pl-20'}>
-                <div className='text-left basis-1/3 justify-around align-middle flex flex-col font-medium'>
+            <div className={'flex justify-around align-middle lg:pl-60 pl-20'}>
+                <div className='text-left basis-1/2 lg:basis-1/3 justify-around align-middle flex flex-col font-medium'>
                     <h3 className="text-[#27253B] text-4xl font-black">
                         NUESTRO EQUIPO
                     </h3>
-                    <p className={'text-3xl font-medium text-[#343252]'}>
+                    <p className={'text-3xl font-medium text-aboutUs'}>
                         Nuestro equipo es <br /> apasionado, cargado de <br /> energía y motivación. <br /> Estamos en constante <br /> aprendizaje buscando <br /> potenciar nuestras <br /> habilidades y crecer <br /> diariamente.
                     </p>
                 </div>
@@ -104,7 +109,31 @@ const AboutUs: NextPage = () => {
                     <Image src={TeamIcon} alt={'Icono de equipo'} />
                 </div>
                 <div className={'py-4'} />
-                <div className={'grid md:grid-cols-3 sm:grid-cols-1 gap-4 '}>
+                <div className={'grid grid-cols-2 content-around md:grid-cols-3 gap-4 p-4'}>
+                    <TeamMemberCard
+                        linkedInUrl={'https://www.linkedin.com/in/juan-pedro-pont-verges-a44630160/'}
+                        twitterUrl={'https://twitter.com/juaanpedro'}
+                        fullName="Ramiro Mansilla"
+                        role="COO"
+                        imgUrl={Ramiro}
+                        className={'basis-1/3'}
+                    />
+                    <TeamMemberCard
+                        linkedInUrl={'https://www.linkedin.com/in/juan-pedro-pont-verges-a44630160/'}
+                        twitterUrl={'https://twitter.com/juaanpedro'}
+                        fullName="Luciana Rainero"
+                        role="CMO"
+                        imgUrl={Luciana}
+                        className={'basis-1/3'}
+                    />
+                    <TeamMemberCard
+                        linkedInUrl={'https://www.linkedin.com/in/juan-pedro-pont-verges-a44630160/'}
+                        twitterUrl={'https://twitter.com/juaanpedro'}
+                        fullName="Emilio Chambouleyron"
+                        role="CEO"
+                        imgUrl={Emilio}
+                        className={'basis-1/3'}
+                    />
                     <TeamMemberCard
                         linkedInUrl={'https://www.linkedin.com/in/juan-pedro-pont-verges-a44630160/'}
                         twitterUrl={'https://twitter.com/juaanpedro'}
@@ -116,41 +145,17 @@ const AboutUs: NextPage = () => {
                     <TeamMemberCard
                         linkedInUrl={'https://www.linkedin.com/in/juan-pedro-pont-verges-a44630160/'}
                         twitterUrl={'https://twitter.com/juaanpedro'}
-                        fullName="Juan Pedro Pont Verges"
-                        role="CTO"
-                        imgUrl={JuanPedro}
+                        fullName="Paula Mattio"
+                        role="UX/UI"
+                        imgUrl={Paula}
                         className={'basis-1/3'}
-                        />
+                    />
                     <TeamMemberCard
                         linkedInUrl={'https://www.linkedin.com/in/juan-pedro-pont-verges-a44630160/'}
                         twitterUrl={'https://twitter.com/juaanpedro'}
-                        fullName="Juan Pedro Pont Verges"
-                        role="CTO"
-                        imgUrl={JuanPedro}
-                        className={'basis-1/3'}
-                        />
-                    <TeamMemberCard
-                        linkedInUrl={'https://www.linkedin.com/in/juan-pedro-pont-verges-a44630160/'}
-                        twitterUrl={'https://twitter.com/juaanpedro'}
-                        fullName="Juan Pedro Pont Verges"
-                        role="CTO"
-                        imgUrl={JuanPedro}
-                        className={'basis-1/3'}
-                        />
-                    <TeamMemberCard
-                        linkedInUrl={'https://www.linkedin.com/in/juan-pedro-pont-verges-a44630160/'}
-                        twitterUrl={'https://twitter.com/juaanpedro'}
-                        fullName="Juan Pedro Pont Verges"
-                        role="CTO"
-                        imgUrl={JuanPedro}
-                        className={'basis-1/3'}
-                        />
-                    <TeamMemberCard
-                        linkedInUrl={'https://www.linkedin.com/in/juan-pedro-pont-verges-a44630160/'}
-                        twitterUrl={'https://twitter.com/juaanpedro'}
-                        fullName="Juan Pedro Pont Verges"
-                        role="CTO"
-                        imgUrl={JuanPedro}
+                        fullName="Augusto Chambouleyron"
+                        role="Fullstack Developer"
+                        imgUrl={Augusto}
                         className={'basis-1/3'}
                     />
                 </div>
