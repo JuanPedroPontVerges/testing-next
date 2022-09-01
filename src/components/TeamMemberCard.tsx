@@ -1,9 +1,7 @@
 import Image, { StaticImageData } from "next/image";
 import React from "react"
 import Instagram from 'public/instagram.png';
-import Linkedin from 'public/linkedin.png';
 import LinkedinSvg from 'public/linkedin.svg';
-import Twitter from 'public/twitter.png';
 import TwitterSvg from 'public/twitter.svg';
 import Link from "next/link";
 interface TeamMemberCardProps {
