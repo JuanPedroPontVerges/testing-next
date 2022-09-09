@@ -13,7 +13,9 @@ module.exports = {
                 'form': "url('/fondo-form.png')",
             },
             colors: {
-                'aboutUs': 'rgba(52, 50, 82, 0.5)',
+                'c-grey': 'rgba(52, 50, 82, 0.5)',
+                'c-blue': '#27253b',
+                'c-yellow': '#f06e19'
             },
         }
     },

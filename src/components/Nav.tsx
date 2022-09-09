@@ -1,7 +1,5 @@
-
-
 import React from "react"
-import LogoCacao from 'public/logo-cacao.png'
+import LogoCacao from 'public/logo-cacao.svg'
 import Image from "next/image";
 import Link from "next/link";
 interface NavComponentProps {
@@ -12,7 +10,7 @@ const Nav: React.FC<NavComponentProps> = ({ mobile }) => {
         mobile ? (
             <nav className={"md:hidden w-full flex flex-row justify-between items-center px-4 drop-shadow-2xl fixed top-0 z-50 bg-[#27253B]"} >
                 <div>
-                    <Image src={LogoCacao} alt='Cacao' width={200} height={140} />
+                    <Image src={LogoCacao} alt='Cacao' />
                 </div>
                 <div className="space-y-2">
                     <div className="w-14 h-2 bg-white rounded-md" />
@@ -21,11 +19,11 @@ const Nav: React.FC<NavComponentProps> = ({ mobile }) => {
                 </div>
             </nav >
         ) : (
-            <nav className={"hidden md:flex flex-row justify-between items-center px-0 md:px-4 shadow-xl bg-[#27253B]"}>
-                <div className="px-0 md:px-2">
-                    <Image src={LogoCacao} alt='Cacao' width={200} height={140} />
+            <nav className={"hidden md:flex flex-row justify-between items-center p-4 shadow-xl bg-c-blue"}>
+                <div>
+                    <Image src={LogoCacao} alt='Cacao' />
                 </div>
-                <div className="flex flex-row list-none gap-20 pr-20 text-2xl font-medium">
+                <div className="flex flex-row list-none gap-8 text-xl font-medium">
                     <Link href="/">
                         <li className="cursor-pointer">Inicio</li>
                     </Link>

@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url("@mdi/font/css/materialdesignicons.css");
 
 body {
   @apply text-white;
@@ -13,6 +14,10 @@ body {
   width: 11px !important;
   height: 11px !important;
   border-radius: 100%;
+}
+
+.fit-content {
+  width: fit-content;
 }
 
 .carousel-indicators {

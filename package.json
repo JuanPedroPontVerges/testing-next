@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@mdi/font": "^7.0.96",
     "@trpc/client": "^9.26.2",
     "@trpc/next": "^9.26.2",
     "@trpc/react": "^9.26.2",

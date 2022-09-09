@@ -22,7 +22,7 @@ const AboutUs: NextPage = () => {
         <>
             <div className="bg-about-us-banner bg-no-repeat bg-cover items-center">
                 <div className={'flex flex-col justify-center items-center h-screen'}>
-                    <h1 className={'text-7xl text-[#F88600] font-black'}>Conocenos</h1>
+                    <h1 className={'text-7xl text-c-yellow font-black'}>Conocenos</h1>
                 </div>
             </div>
             <div className={'py-20'} />
@@ -31,13 +31,13 @@ const AboutUs: NextPage = () => {
                     <Image src={Puzzle} alt={'Icono de rompecabezas'} />
                 </div>
                 <div className='text-left basis-1/3 flex flex-col justify-around gap-20'>
-                    <h3 className="text-aboutUs text-4xl">
+                    <h3 className="text-c-grey text-4xl">
                         WIN-WIN
                     </h3>
-                    <h2 className={'text-6xl font-black text-[#27253B]'}>
+                    <h2 className={'text-6xl font-black text-c-blue'}>
                         Si vos ganas, nosotros también
                     </h2>
-                    <p className={'text-3xl font-medium text-[#9A98A8]'}>
+                    <p className={'text-3xl font-medium text-c-grey'}>
                         Te brindamos las herramientas necesarias para que conozcas a tus clientes, potencies tus ventas y puedas ofrecer una mejor experiencia.
                     </p>
                 </div>
@@ -45,13 +45,13 @@ const AboutUs: NextPage = () => {
             <div className={'py-20'} />
             <div className={'flex justify-around align-middle lg:pl-60 pl-20'}>
                 <div className='text-left basis-1/3 flex flex-col justify-around gap-20'>
-                    <h3 className="text-aboutUs text-4xl">
+                    <h3 className="text-c-grey text-4xl">
                         HIGH FIVE
                     </h3>
-                    <h2 className={'text-6xl font-black text-[#27253B]'}>
+                    <h2 className={'text-6xl font-black text-c-blue'}>
                         Trabajo en equipo
                     </h2>
-                    <p className={'text-3xl font-medium text-[#9A98A8]'}>
+                    <p className={'text-3xl font-medium text-c-grey'}>
                         Buscamos trabajar en conjunto con nuestros clientes y generar una comunidad en la que predominen la confianza, la seguridad y la honestidad.
                     </p>
                 </div>
@@ -65,10 +65,10 @@ const AboutUs: NextPage = () => {
                     <Image src={Improvement} alt={'Icono de mejora'} />
                 </div>
                 <div className='text-left basis-1/3 flex flex-col justify-around gap-20'>
-                    <h3 className="text-aboutUs text-4xl">
+                    <h3 className="text-c-grey text-4xl">
                         EFICACIA Y EFICIENCIA
                     </h3>
-                    <h2 className={'text-6xl font-black text-[#27253B]'}>
+                    <h2 className={'text-6xl font-black text-c-blue'}>
                         Mejora continua
                     </h2>
                     <p className={'text-3xl font-medium text-[#9A98A8]'}>
@@ -77,7 +77,7 @@ const AboutUs: NextPage = () => {
                 </div>
             </div>
             <div className={'py-20'} />
-            <div className={'flex flex-row bg-[#29204A] items-center justify-around py-20'}>
+            <div className={'flex flex-row bg-c-blue items-center justify-around py-20'}>
                 <div>
                     <h2 className={'font-black text-6xl'}>Nuestra visión</h2>
                     <p className={'text-3xl italic'}>Queremos que tu negocio prospere y <br />
@@ -90,7 +90,7 @@ const AboutUs: NextPage = () => {
             <div className={'py-10'} />
             <div className={'flex justify-around align-middle lg:pl-60 pl-20'}>
                 <div className='text-left basis-1/2 lg:basis-1/3 justify-around align-middle flex flex-col font-medium'>
-                    <h3 className="text-[#27253B] text-4xl font-black">
+                    <h3 className="text-c-blue text-4xl font-black">
                         NUESTRO EQUIPO
                     </h3>
                     <p className={'text-3xl font-medium text-aboutUs'}>
@@ -104,7 +104,7 @@ const AboutUs: NextPage = () => {
             <div className={'py-20'} />
             <div className={'sm:px-20 lg:px-60'}>
                 <div className="flex flex-row">
-                    <h3 className={'font-bold text-[#F88600] text-6xl'}>Integrantes</h3>
+                    <h3 className={'font-bold text-c-yellow text-6xl'}>Integrantes</h3>
                     <div className={'px-1'} />
                     <Image src={TeamIcon} alt={'Icono de equipo'} />
                 </div>
