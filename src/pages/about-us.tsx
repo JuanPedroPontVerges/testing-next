@@ -1,19 +1,19 @@
 import { NextPage } from "next";
 import Image from "next/image";
 /* Images */
-import Puzzle from 'public/puzzle.png';
-import TeamWork from 'public/team-work.png';
-import Improvement from 'public/improvement.png';
-import Lightbulb from 'public/lightbulb.png';
-import Team from 'public/team.png';
-import TeamIcon from 'public/equipo.svg';
+import Puzzle from 'public/assets/puzzle.png';
+import TeamWork from 'public/assets/team-work.png';
+import Improvement from 'public/assets/improvement.png';
+import Lightbulb from 'public/assets/lightbulb.png';
+import Team from 'public/assets/team.png';
+import TeamIcon from 'public/assets/equipo.svg';
 // Team Members
-import JuanPedro from 'public/juan-pedro.svg';
-import Augusto from 'public/augustus.svg';
-import Emilio from 'public/emilio.svg';
-import Paula from 'public/paula.svg';
-import Ramiro from 'public/ramiro.svg';
-import Luciana from 'public/luciana.svg';
+import JuanPedro from 'public/assets/juan-pedro.svg';
+import Augusto from 'public/assets/augustus.svg';
+import Emilio from 'public/assets/emilio.svg';
+import Paula from 'public/assets/paula.svg';
+import Ramiro from 'public/assets/ramiro.svg';
+import Luciana from 'public/assets/luciana.svg';
 /* Components */
 import TeamMemberCard from "@/components/TeamMemberCard";
 

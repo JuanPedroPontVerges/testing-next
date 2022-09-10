@@ -1,8 +1,8 @@
 import Image, { StaticImageData } from "next/image";
 import React from "react"
-import Instagram from 'public/instagram.png';
-import LinkedinSvg from 'public/linkedin.svg';
-import TwitterSvg from 'public/twitter.svg';
+import Instagram from 'public/assets/instagram.png';
+import LinkedinSvg from 'public/assets/linkedin.svg';
+import TwitterSvg from 'public/assets/twitter.svg';
 import Link from "next/link";
 interface TeamMemberCardProps {
     imgUrl: StaticImageData;

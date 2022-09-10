@@ -1,20 +1,14 @@
 import Image from "next/image";
 import React from "react"
-import LogoCacao from 'public/logo-cacao.png'
-import LogoFooter from 'public/logo.png'
-import Link from "next/link";
+import LogoFooter from 'public/assets/logo-cacao-vertical.png'
 import ScrollToTop from "./ScrollToTop";
 import Nav from '@/components/Nav';
 
 const Layout: React.FC<any> = (props) => {
     return (
         <div className="h-screen w-[100vh] md:w-full">
-            {/* Mobile nav */}
-            <Nav mobile />
-            {/* Desktop nav */}
             <Nav />
             <main className="w-full">
-                <div className="py-12 md:py-0" />
                 {props.children}
             </main>
             <ScrollToTop />

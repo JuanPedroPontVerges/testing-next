@@ -1,43 +1,86 @@
-import React from "react"
-import LogoCacao from 'public/logo-cacao.svg'
-import Image from "next/image";
-import Link from "next/link";
-interface NavComponentProps {
-    mobile?: boolean;
-}
-const Nav: React.FC<NavComponentProps> = ({ mobile }) => {
-    return (
-        mobile ? (
-            <nav className={"md:hidden w-full flex flex-row justify-between items-center px-4 drop-shadow-2xl fixed top-0 z-50 bg-[#27253B]"} >
-                <div>
-                    <Image src={LogoCacao} alt='Cacao' />
-                </div>
-                <div className="space-y-2">
-                    <div className="w-14 h-2 bg-white rounded-md" />
-                    <div className="w-14 h-2 bg-white rounded-md" />
-                    <div className="w-14 h-2 bg-white rounded-md" />
-                </div>
-            </nav >
-        ) : (
-            <nav className={"hidden md:flex flex-row justify-between items-center p-4 shadow-xl bg-c-blue"}>
-                <div>
-                    <Image src={LogoCacao} alt='Cacao' />
-                </div>
-                <div className="flex flex-row list-none gap-8 text-xl font-medium">
-                    <Link href="/">
-                        <li className="cursor-pointer">Inicio</li>
-                    </Link>
-                    <Link href={"/about-us"}>
-                        <li className="cursor-pointer">Sobre Nosotros</li>
-                    </Link>
-                    <Link href={"contact"}>
-                        <li className="cursor-pointer">Contacto</li>
-                    </Link>
-                </div>
-            </nav>
-        )
+import Link from 'next/link';
+import { useState } from 'react';
+import LogoCacaoHorizontal from 'public/assets/logo-cacao-horizontal.svg';
+import LogoCacaoVertical from 'public/assets/logo-cacao-vertical.png';
+import Image from 'next/image';
 
-    )
+const Nav: React.FC<{}> = ({ }) => {
+    const [navbar, setNavbar] = useState(false);
+    return (
+        <nav className="w-full bg-c-blue shadow mb-[-1px]">
+            <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
+                <div>
+                    <div className="flex items-center justify-between py-3 md:py-5 md:block">
+                        <a href="#" className="md:hidden">
+                            <Image src={LogoCacaoVertical} alt={'Logo Cacao'} />
+                        </a>
+                        <a href="#" className="hidden md:block">
+                            <Image src={LogoCacaoHorizontal} alt={'Logo Cacao'} />
+                        </a>
+                        <div className="md:hidden">
+                            <button
+                                className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
+                                onClick={() => setNavbar(!navbar)}
+                            >
+                                {navbar ? (
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        className="w-6 h-6 text-white"
+                                        viewBox="0 0 20 20"
+                                        fill="currentColor"
+                                    >
+                                        <path
+                                            fillRule="evenodd"
+                                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                                            clipRule="evenodd"
+                                        />
+                                    </svg>
+                                ) : (
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        className="w-6 h-6 text-white"
+                                        fill="none"
+                                        viewBox="0 0 24 24"
+                                        stroke="currentColor"
+                                        strokeWidth={2}
+                                    >
+                                        <path
+                                            strokeLinecap="round"
+                                            strokeLinejoin="round"
+                                            d="M4 6h16M4 12h16M4 18h16"
+                                        />
+                                    </svg>
+                                )}
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div
+                        className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${navbar ? 'block' : 'hidden'}`}
+                    >
+                        <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
+                            <li className="text-white">
+                                <Link href="/">
+                                    <a>Inicio</a>
+                                </Link>
+                            </li>
+                            <li className="text-white">
+                                <Link href="/about-us">
+                                    <a>Sobre Nosotros</a>
+                                </Link>
+                            </li>
+                            <li className="text-white">
+                                <Link href="/">
+                                    <a>Contacto</a>
+                                </Link>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    );
 }
 
 export default Nav;

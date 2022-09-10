@@ -7,10 +7,10 @@ module.exports = {
     theme: {
         extend: {
             backgroundImage: {
-                'completed-tasks': "url('/tareas-completas.png')",
-                'pink-decoration': "url('/decoracion-rosa.png')",
-                'about-us-banner': "url('/about-us-banner.png')",
-                'form': "url('/fondo-form.png')",
+                'completed-tasks': "url('/assets/tareas-completas.png')",
+                'pink-decoration': "url('/assets/decoracion-rosa.png')",
+                'about-us-banner': "url('/assets/about-us-banner.png')",
+                'form': "url('/assets/fondo-form.png')",
             },
             colors: {
                 'c-grey': 'rgba(52, 50, 82, 0.5)',

@@ -2,23 +2,18 @@ import type { NextPage } from 'next'
 import Image from 'next/image';
 import { Carousel } from 'react-bootstrap';
 /* Images */
-import Dasboard from 'public/dashboard.svg'
-import Twittter from 'public/twitter.png';
-import Iphones from 'public/iphones.png'
-import Marketing from 'public/marketing.svg'
-import GoogleReviews from 'public/google-reviews.svg'
-import Encuestas from 'public/img-compras.png'
-import TiltedPhone from 'public/celular-inclinado.png'
-import GoogleReviewsYellow from 'public/google-reviews-yellow.png'
-import VideoPreview from 'public/preview-video.png';
-import WhatsappScreens from 'public/pantallas-whatsapp.png';
-import Macbook from 'public/macbook.png';
-import HumanInCircle from 'public/persona-en-circulo.png';
-import MotorcycleInCircle from 'public/moto-en-circulo.png';
-import TrendingArrow from 'public/flecha-tendencia.png';
-import YellowStore from 'public/tienda-amarilla.png';
-import HandWithCoin from 'public/mano-con-moneda.png';
-import Community from 'public/comunidad.png';
+import Dasboard from 'public/assets/dashboard.svg'
+import Iphones from 'public/assets/iphones.png'
+import Encuestas from 'public/assets/img-compras.png'
+import GoogleReviewsYellow from 'public/assets/google-reviews-yellow.png'
+import VideoPreview from 'public/assets/preview-video.png';
+import WhatsappScreens from 'public/assets/pantallas-whatsapp.png';
+import Macbook from 'public/assets/macbook.png';
+import HumanInCircle from 'public/assets/persona-en-circulo.png';
+import MotorcycleInCircle from 'public/assets/moto-en-circulo.png';
+import TrendingArrow from 'public/assets/flecha-tendencia.png';
+import HandWithCoin from 'public/assets/mano-con-moneda.png';
+import Community from 'public/assets/comunidad.png';
 /* Components */
 import Title from '@/components/Title';
 import Button from '@/components/Button';
@@ -29,7 +24,7 @@ import Form from '@/components/Form';
 const Home: NextPage = () => {
   return (
     <div>
-      <div className={'bg-c-blue container mx-auto'}>
+      <div className={'bg-c-blue'}>
         {/* Banner */}
         <div className='flex flex-row justify-around'>
           <div className={"flex flex-col pt-20"}>
@@ -233,7 +228,7 @@ const Home: NextPage = () => {
               <p className='text-[#353535]'>Valoración de tus servicios</p>
             </div>
             <div className={'text-center'}>
-              <Image src={YellowStore} alt={'persona en un circulo, icono'} />
+              <Image src={TrendingArrow} alt={'persona en un circulo, icono'} />
               <p className='text-[#353535]'>Comparación por sucursal</p>
             </div>
             <div className={'text-center'}>
@@ -282,13 +277,11 @@ const Home: NextPage = () => {
           <Carousel controls={false} interval={2500} draggable>
             <Carousel.Item>
               <div className='flex flex-col items-center justify-center h-[500px] text-black'>
-                <Image src={Twittter} alt={'Mano con moneda'} />
                 <h3 className={'mt-4 text-[28px] font-medium text-center'}>Elegí tus beneficios</h3>
               </div>
             </Carousel.Item>
             <Carousel.Item>
               <div className='flex flex-col items-center justify-center h-[500px] text-black'>
-                <Image src={Twittter} alt={'Comunidad cacao'} />
                 <h3 className={'mt-4 text-[28px] font-medium text-center'}>Conocé a tus clientes</h3>
               </div>
             </Carousel.Item>
