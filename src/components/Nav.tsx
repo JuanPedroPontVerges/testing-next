@@ -25,7 +25,7 @@ const Nav: React.FC<{}> = ({ }) => {
                                 {navbar ? (
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
-                                        className="w-6 h-6 text-white"
+                                        className="w-10 h-10 text-white"
                                         viewBox="0 0 20 20"
                                         fill="currentColor"
                                     >
@@ -38,7 +38,7 @@ const Nav: React.FC<{}> = ({ }) => {
                                 ) : (
                                     <svg
                                         xmlns="http://www.w3.org/2000/svg"
-                                        className="w-6 h-6 text-white"
+                                        className="w-10 h-10 text-white"
                                         fill="none"
                                         viewBox="0 0 24 24"
                                         stroke="currentColor"
@@ -59,7 +59,7 @@ const Nav: React.FC<{}> = ({ }) => {
                     <div
                         className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${navbar ? 'block' : 'hidden'}`}
                     >
-                        <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
+                        <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0 text-2xl md:text-base">
                             <li className="text-white">
                                 <Link href="/">
                                     <a>Inicio</a>

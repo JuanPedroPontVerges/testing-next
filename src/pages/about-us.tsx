@@ -1,4 +1,5 @@
 import { NextPage } from "next";
+import Head from "next/head";
 import Image from "next/image";
 /* Images */
 import Puzzle from 'public/assets/puzzle.png';
@@ -20,6 +21,10 @@ import TeamMemberCard from "@/components/TeamMemberCard";
 const AboutUs: NextPage = () => {
     return (
         <>
+            <Head>
+                <title>Cacao</title>
+                <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+            </Head>
             <div className="bg-about-us-banner bg-no-repeat bg-cover items-center">
                 <div className={'flex flex-col justify-center items-center h-screen'}>
                     <h1 className={'text-7xl text-c-yellow font-black'}>Conocenos</h1>

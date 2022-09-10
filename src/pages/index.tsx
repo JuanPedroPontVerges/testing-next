@@ -20,10 +20,15 @@ import Button from '@/components/Button';
 import Line from '@/components/Line';
 import ResponsiveLineBreak from '@/components/ResponsiveLineBreak';
 import Form from '@/components/Form';
+import Head from 'next/head';
 
 const Home: NextPage = () => {
   return (
     <div>
+      <Head>
+        <title>Cacao</title>
+        <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      </Head>
       <div className={'bg-c-blue'}>
         {/* Banner */}
         <div className='flex flex-row justify-around'>
