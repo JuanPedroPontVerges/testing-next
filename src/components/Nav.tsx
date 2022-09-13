@@ -8,15 +8,19 @@ const Nav: React.FC<{}> = ({ }) => {
     const [navbar, setNavbar] = useState(false);
     return (
         <nav className="w-full bg-c-blue shadow mb-[-1px]">
-            <div className="justify-between px-4 mx-auto lg:max-w-7xl md:items-center md:flex md:px-8">
+            <div className="md:flex justify-between md:items-center lg:max-w-7xl px-4 mx-auto">
                 <div>
                     <div className="flex items-center justify-between py-3 md:py-5 md:block">
-                        <a href="#" className="md:hidden">
-                            <Image src={LogoCacaoVertical} alt={'Logo Cacao'} />
-                        </a>
-                        <a href="#" className="hidden md:block">
-                            <Image src={LogoCacaoHorizontal} alt={'Logo Cacao'} />
-                        </a>
+                        <div>
+                            <a href="#" className="md:hidden">
+                                <Image src={LogoCacaoVertical} alt={'Logo Cacao'} />
+                            </a>
+                        </div>
+                        <div>
+                            <a href="#" className="hidden md:block">
+                                <Image src={LogoCacaoHorizontal} alt={'Logo Cacao'} />
+                            </a>
+                        </div>
                         <div className="md:hidden">
                             <button
                                 className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"

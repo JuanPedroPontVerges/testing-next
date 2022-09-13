@@ -24,7 +24,7 @@ import Head from 'next/head';
 
 const Home: NextPage = () => {
   return (
-    <div>
+    <>
       <Head>
         <title>Cacao</title>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -125,12 +125,14 @@ const Home: NextPage = () => {
           <div className='text-center'>
             <Image src={Encuestas} alt={'Lugares por el cual acceder a la encuesta'} />
           </div>
-          <div className='basis-1/2'>
+          <div>
             <div className='flex flex-col justify-center h-full'>
               <div className='flex flex-col justify-around h-2/3 text-left'>
-                <Title color={'#F88600'}>
-                  Encuestas
-                </Title>
+                <div className='bg-c-blue p-2 rounded fit-content'>
+                  <h2 className='text-white text-6xl font-extrabold text-left'>
+                    Encuestas
+                  </h2>
+                </div>
                 <p className={'text-3xl text-black'}>
                   Tus clientes acceden a una <strong>breve encuesta</strong>{' '}
                   <ResponsiveLineBreak />donde <strong>evalúan su experiencia</strong> y, a cambio,<ResponsiveLineBreak />
@@ -144,11 +146,11 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
-      <div className='py-10' />
+      <div className='my-32' />
       {/* Google Reviews */}
-      <div className={'flex justify-around px-20 md:pr-10'}>
-        <div className='md:basis-2/4'>
-          <div className='flex flex-col items-center md:items-start space-y-4 md:space-y-6'>
+      <div className="container mx-auto">
+        <div className={'flex flex-row justify-around'}>
+          <div className='flex flex-col items-center md:items-start'>
             <div>
               <Title color={'#F88600'}>
                 Encuesta customizable
@@ -165,45 +167,42 @@ const Home: NextPage = () => {
               Mejorá las reseñas de Google Reviews
             </p>
           </div>
-        </div>
-        <div className='hidden md:flex basis-2/4 flex-col items-center space-y-8'>
-          <Image src={VideoPreview} alt={'Preview de video'} />
-          <div className='text-center'>
-            <Button>
-              Ver video
-            </Button>
+          <div className='hidden md:flex flex-col items-center mt-[-12px]'>
+            <Image src={VideoPreview} alt={'Preview de video'} />
+            <div className='text-center'>
+              <Button>
+                Ver video
+              </Button>
+            </div>
           </div>
         </div>
       </div>
-      <div className='py-20' />
+      <div className='my-20' />
       {/* Campañas Marketing */}
-      <div className={'flex justify-around lg:pl-60 sm:pl-20'}>
-        <div className='text-left basis-1/3 flex flex-col justify-around'>
+      <div className="container mx-auto">
+        <div className={'flex flex-row justify-around align-middle'}>
           <div>
-            <Title color={'#F88600'} >
-              Campañas de marketing por WhatsApp
-            </Title>
+            <div className='flex flex-col justify-center h-full'>
+              <div className='flex flex-col justify-around h-2/3 text-left'>
+                <div className='bg-c-blue p-2 rounded fit-content'>
+                  <h2 className='text-white text-6xl font-extrabold text-left'>
+                    Encuestas
+                  </h2>
+                </div>
+                <p className={'text-3xl text-black'}>
+                  Tus clientes acceden a una <strong>breve encuesta</strong>{' '}
+                  <ResponsiveLineBreak />donde <strong>evalúan su experiencia</strong> y, a cambio,<ResponsiveLineBreak />
+                  <strong> obtienen un beneficio </strong> para utilizar <ResponsiveLineBreak /> en su próxima compra.
+                </p>
+                <div>
+                  <Button type={'submit'} id={'send'}>Ver encuesta</Button>
+                </div>
+              </div>
+            </div>
           </div>
-          <div>
-            <p className={'text-3xl text-black font-light'}>
-              Con <strong className='font-bold'>Cacao</strong> podes crear:
-            </p>
+          <div className='flex flex-col items-center'>
+            <Image src={WhatsappScreens} alt={'Preview de video'} />
           </div>
-          <div>
-            <p className={'text-3xl text-black font-light'}>
-              <strong className='font-bold'>
-                Campañas de Marketing por WhatsApp.
-              </strong>
-            </p>
-          </div>
-          <div>
-            <p className={'text-3xl text-black font-light'}>
-              Podes enviar descuentos personalizados, promocionar tus productos y así <strong className='font-bold'>generar nuevas ventas</strong>
-            </p>
-          </div>
-        </div>
-        <div className='basis-2/3 flex flex-col items-center space-y-8'>
-          <Image src={WhatsappScreens} alt={'Preview de video'} />
         </div>
       </div>
       <div className='py-20' />
@@ -331,7 +330,7 @@ const Home: NextPage = () => {
       </div>
       {/* Form */}
       <Form />
-    </div>
+    </>
   )
 }
 
