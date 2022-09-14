@@ -7,7 +7,7 @@ import Image from 'next/image';
 const Nav: React.FC<{}> = ({ }) => {
     const [navbar, setNavbar] = useState(false);
     return (
-        <nav className="w-full bg-c-blue shadow mb-[-1px]">
+        <nav className="w-full bg-c-blue shadow mb-[-1px] fixed z-10">
             <div className="md:flex justify-between md:items-center lg:max-w-7xl px-4 mx-auto">
                 <div>
                     <div className="flex items-center justify-between py-3 md:py-5 md:block">

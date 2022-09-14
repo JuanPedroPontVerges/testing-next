@@ -31,7 +31,7 @@ const Home: NextPage = () => {
       </Head>
       <div className={'bg-c-blue'}>
         {/* Banner */}
-        <div className='flex flex-row justify-around'>
+        {/* <div className='flex flex-row justify-around'>
           <div className={"flex flex-col pt-20"}>
             <div>
               <h1 className={"uppercase font-bold text-2xl"}>Plataforma web para vendedores</h1>
@@ -45,74 +45,87 @@ const Home: NextPage = () => {
           <div className='pt-20'>
             <Image src={Dasboard} alt={'Cacao métricas'} />
           </div>
+        </div> */}
+        <div className="container mx-auto pt-24">
+          {/* <div className="flex flex-col items-center"> */}
+          <div className='flex justify-around'>
+            <h2 className='text-c-yellow text-6xl font-extrabold pt-20'>
+              Tu cliente, con vos
+            </h2>
+          </div>
+          <div className='flex justify-around'>
+            <h1 className={"uppercase font-bold text-3xl"}>Plataforma web para vendedores</h1>
+          </div>
+          <div className='mt-20 text-center'>
+            <Image src={Dasboard} alt={'Cacao métricas'} />
+          </div>
+          {/* </div> */}
         </div>
       </div>
-      <div className='p-4' />
+      <div className='m-20' />
       {/* Request your demo */}
       <div className={'bg-white container mx-auto'}>
-        <div className='flex flex-row justify-around items-center'>
-          <div>
-            <Image src={Iphones} alt={'Iphones'} />
-          </div>
-          <div className='flex flex-col'>
-            <h2 className='text-6xl font-extrabold text-left'>
-              <span className='text-c-blue'>
-                Todo lo que tu
-                <ResponsiveLineBreak />
-                comercio necesita
-              </span>
+        <div className='flex flex-col text-center'>
+          <h2 className='text-6xl font-extrabold'>
+            <span className='text-c-blue'>
+              Todo lo que tu
               <ResponsiveLineBreak />
-            </h2>
+              comercio necesita
+            </span>
+            <ResponsiveLineBreak />
+          </h2>
+          <div className={'flex justify-center'}>
             <div className='bg-c-blue p-2 rounded fit-content'>
-              <h2 className='text-white text-6xl font-extrabold text-left'>
+              <h2 className='text-white text-6xl font-extrabold'>
                 para incrementar ventas
               </h2>
             </div>
-            <div className='py-4'>
-              <Button>
-                ¡Pedí tu prueba!
-              </Button>
-            </div>
           </div>
         </div>
-      </div>
-      <div className={'container md:my-28'}>
-        <div className='mb-16'>
-          <h2 className='text-c-blue text-center text-6xl font-extrabold pb-6'>
-            Con cacao podés
-          </h2>
+        <div className='m-20' />
+        <div className='flex justify-center'>
+          <div>
+            <Image src={Iphones} alt={'Iphones'} />
+          </div>
         </div>
-        <div className={'flex flex-row justify-around items-center text-2xl gap-4'}>
-          <div className={'basis-1/3 text-center'}>
-            <div className='mb-8'>
-              <span className='mdi mdi-bullseye-arrow text-white bg-c-blue text-6xl rounded p-4' />
-            </div>
-            <div className='pt-4'>
-              <p className='text-c-blue font-medium'>
+        <div className='flex justify-center my-12'>
+          <Button>
+            ¡Pedí tu prueba!
+          </Button>
+        </div>
+      </div>
+      <div className={'container my-28'}>
+        <h2 className='text-c-blue text-center text-6xl font-extrabold pb-10'>
+          Con cacao podés
+        </h2>
+        <div className={'flex justify-center text-2xl gap-4 my-16'}>
+          <div className={'text-center'}>
+            <span className='mdi mdi-bullseye-arrow text-white bg-c-blue text-8xl rounded p-4' />
+            <div className='my-14'>
+              <p className='text-c-blue font-medium text-4xl'>
                 Realizar publicidad dirigida
                 <ResponsiveLineBreak />
-                y de los estándares de la marca
                 {/* Aca debriamos poner 'y ...' */}
               </p>
             </div>
           </div>
-          <div className={'basis-1/3 text-center'}>
-            <div className='mb-8'>
-              <span className='mdi mdi-account-supervisor-circle text-white bg-c-blue text-6xl rounded p-4' />
-            </div>
-            <div className='pt-4'>
-              <p className='text-c-blue font-medium'>
-                Llevar un control del personal <ResponsiveLineBreak /> y de los estándares de la marca
+        </div>
+        <div className={'flex justify-center text-2xl my-16'}>
+          <div className={'text-center'}>
+            <span className='mdi mdi-account-supervisor-circle text-white bg-c-blue text-8xl rounded p-4' />
+            <div className='my-14'>
+              <p className='text-c-blue font-medium text-4xl'>
+                Llevar un control del personal <br /> y de los estándares de la marca
               </p>
             </div>
           </div>
-          <div className={'basis-1/3 text-center'}>
-            <div className='mb-8'>
-              <span className='mdi mdi-map-marker-star text-white bg-c-blue text-6xl rounded p-4' />
-            </div>
-            <div className='pt-4'>
-              <p className='mx-auto text-c-blue font-medium'>
-                Gestionar las críticas negativas <ResponsiveLineBreak /> y aumentar las positivas
+        </div>
+        <div className={'flex justify-center text-2xl'}>
+          <div className={'text-center'}>
+            <span className='mdi mdi-map-marker-star text-white bg-c-blue text-8xl rounded p-4' />
+            <div className='my-14'>
+              <p className='mx-auto text-c-blue font-medium text-4xl'>
+                Gestionar las críticas negativas <br /> y aumentar las positivas
               </p>
             </div>
           </div>
