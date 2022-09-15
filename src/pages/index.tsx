@@ -238,8 +238,8 @@ const Home: NextPage = () => {
         </div>
       </div>
       <div className='p-4' />
-      {/* Carrousel */}
-      <div className={'flex flex-row bg-[#27253B]'}>
+      {/* Carrousel || Commenting for now because it breaks viewport in mobile*/}
+      {/* <div className={'flex flex-row bg-[#27253B]'}> 
         <div className={'basis-2/3'}>
           <Carousel controls={false} interval={2500} draggable>
             <Carousel.Item>
@@ -265,7 +265,7 @@ const Home: NextPage = () => {
             <strong> tu cliente con vos.</strong>
           </p>
         </div>
-      </div>
+      </div> */}
       {/* Carrousel customers */}
       <div className={'flex flex-col bg-[#ECF7FF] p-6'}>
         <div className='p-4' />
