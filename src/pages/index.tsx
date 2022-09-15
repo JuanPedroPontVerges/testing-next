@@ -133,7 +133,32 @@ const Home: NextPage = () => {
       </div>
       <div className='p-4' />
       { /* Encuestas*/}
-      <div className="container mx-auto bg-completed-tasks bg-no-repeat bg-left-bottom mt-4">
+      <div className='m-20' />
+      {/* Request your demo */}
+      <div className={'bg-white container mx-auto'}>
+        <div className='flex flex-col text-center gap-y-6'>
+          <h2 className='text-c-yellow text-6xl font-extrabold text-center'>
+            Encuestas
+          </h2>
+          <div className={'flex justify-center'}>
+            <p className={'text-3xl text-black text-center'}>
+              Tus clientes acceden a una <strong>breve encuesta</strong>{' '}
+              <ResponsiveLineBreak />donde <strong>evalúan su experiencia</strong> y, a cambio,<ResponsiveLineBreak />
+              <strong> obtienen un beneficio </strong> para utilizar <ResponsiveLineBreak /> en su próxima compra.
+            </p>
+          </div>
+        </div>
+        <div className='m-20' />
+        <div className='flex justify-center'>
+          <Image src={Encuestas} alt={'Lugares por el cual acceder a la encuesta'} />
+        </div>
+        <div className='flex justify-center my-12'>
+          <Button>
+            ¡Pedí tu prueba!
+          </Button>
+        </div>
+      </div>
+      {/* <div className="container mx-auto bg-completed-tasks bg-no-repeat bg-left-bottom mt-4">
         <div className={'flex flex-row justify-around '}>
           <div className='text-center'>
             <Image src={Encuestas} alt={'Lugares por el cual acceder a la encuesta'} />
@@ -158,7 +183,7 @@ const Home: NextPage = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       <div className='my-32' />
       {/* Google Reviews */}
       <div className="container mx-auto">
