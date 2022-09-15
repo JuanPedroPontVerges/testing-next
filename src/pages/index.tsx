@@ -68,7 +68,7 @@ const Home: NextPage = () => {
         <div className='flex flex-col text-center'>
           <h2 className='text-6xl font-extrabold'>
             <span className='text-c-blue'>
-              Todo lo que tu
+              Todo lo que tú{' '}
               <ResponsiveLineBreak />
               comercio necesita
             </span>
