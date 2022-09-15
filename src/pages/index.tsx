@@ -313,7 +313,7 @@ const Home: NextPage = () => {
         </div>
         <div className='p-8' />
         <div className={'mx-auto'}>
-          <Line className='w-[500px] border-4 border-[#F08619]/[.30]' />
+          <Line className='w-24 border-4 border-[#F08619]/[.30]' />
         </div>
         <div>
           <Carousel controls={false} interval={2500} draggable>

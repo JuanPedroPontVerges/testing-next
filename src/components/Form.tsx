@@ -169,6 +169,7 @@ const Form: React.FC<{}> = () => {
                             onChange={onChange}
                             className="recaptcha"
                             id="captcha"
+                            style={{ width: '6rem' }}
                         />
                         <div className="error-msg">
                             {emailError}

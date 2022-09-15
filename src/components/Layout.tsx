@@ -6,13 +6,13 @@ import Nav from '@/components/Nav';
 
 const Layout: React.FC<any> = (props) => {
     return (
-        <div className="h-screen w-[100vh] md:w-full">
+        <div className="h-screen">
             <Nav />
-            <main className="w-full">
+            <main className="w-screen">
                 {props.children}
             </main>
             <ScrollToTop />
-            <footer className="p-6 md:p-4 bg-[#F1F1F1] text-black w-full">
+            <footer className="p-6 bg-[#F1F1F1] text-black w-full">
                 <div className="md:flex md:justify-between">
                     <div className="mb-6 md:mb-0">
                         <a href="https://cacao.to/" className="flex items-center">
