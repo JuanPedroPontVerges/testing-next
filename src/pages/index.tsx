@@ -32,7 +32,6 @@ const Home: NextPage = () => {
       <div className={'bg-c-blue'}>
         {/* Banner */}
         <div className="container mx-auto pt-24">
-          {/* <div className="flex flex-col items-center"> */}
           <div className='flex justify-around'>
             <h2 className='text-c-yellow text-6xl font-extrabold pt-20'>
               Tu cliente, con vos
@@ -44,7 +43,6 @@ const Home: NextPage = () => {
           <div className='mt-20 text-center'>
             <Image src={Dasboard} alt={'Cacao métricas'} />
           </div>
-          {/* </div> */}
         </div>
       </div>
       <div className='m-20' />

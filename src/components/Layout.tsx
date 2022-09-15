@@ -8,7 +8,7 @@ const Layout: React.FC<any> = (props) => {
     return (
         <div className="h-screen">
             <Nav />
-            <main className="w-screen">
+            <main>
                 {props.children}
             </main>
             <ScrollToTop />
