@@ -164,13 +164,13 @@ const Form: React.FC<{}> = () => {
                         <div className="font-bold text-green-600 font-3xl text-left pb-2">
                             {okMessage}
                         </div>
-                        <ReCAPTCHA
+                        {/* Commenting this for now because it breaks viewport in mobile */}
+                        {/* <ReCAPTCHA
                             sitekey="6Ld1AVogAAAAAMQ_WhUMhPkUmyqDYR7fD_zcG6QS"
                             onChange={onChange}
                             className="recaptcha"
                             id="captcha"
-                            style={{ width: '1px !important' }}
-                        />
+                        /> */}
                         <div className="error-msg">
                             {emailError}
                             {errorMessage}
