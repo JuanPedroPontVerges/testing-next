@@ -31,21 +31,6 @@ const Home: NextPage = () => {
       </Head>
       <div className={'bg-c-blue'}>
         {/* Banner */}
-        {/* <div className='flex flex-row justify-around'>
-          <div className={"flex flex-col pt-20"}>
-            <div>
-              <h1 className={"uppercase font-bold text-2xl"}>Plataforma web para vendedores</h1>
-            </div>
-            <div>
-              <h2 className='text-c-yellow text-8xl font-extrabold pt-20'>
-                Tu cliente, <br /> con vos
-              </h2>
-            </div>
-          </div>
-          <div className='pt-20'>
-            <Image src={Dasboard} alt={'Cacao métricas'} />
-          </div>
-        </div> */}
         <div className="container mx-auto pt-24">
           {/* <div className="flex flex-col items-center"> */}
           <div className='flex justify-around'>
@@ -158,32 +143,6 @@ const Home: NextPage = () => {
           </Button>
         </div>
       </div>
-      {/* <div className="container mx-auto bg-completed-tasks bg-no-repeat bg-left-bottom mt-4">
-        <div className={'flex flex-row justify-around '}>
-          <div className='text-center'>
-            <Image src={Encuestas} alt={'Lugares por el cual acceder a la encuesta'} />
-          </div>
-          <div>
-            <div className='flex flex-col justify-center h-full'>
-              <div className='flex flex-col justify-around h-2/3 text-left'>
-                <div className='bg-c-blue p-2 rounded fit-content'>
-                  <h2 className='text-white text-6xl font-extrabold text-left'>
-                    Encuestas
-                  </h2>
-                </div>
-                <p className={'text-3xl text-black'}>
-                  Tus clientes acceden a una <strong>breve encuesta</strong>{' '}
-                  <ResponsiveLineBreak />donde <strong>evalúan su experiencia</strong> y, a cambio,<ResponsiveLineBreak />
-                  <strong> obtienen un beneficio </strong> para utilizar <ResponsiveLineBreak /> en su próxima compra.
-                </p>
-                <div>
-                  <Button type={'submit'} id={'send'}>Ver encuesta</Button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
       <div className='my-32' />
       {/* Google Reviews */}
       <div className="container mx-auto">
