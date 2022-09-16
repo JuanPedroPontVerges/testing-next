@@ -79,14 +79,14 @@ const Home: NextPage = () => {
         </div>
       </div>
       <div className={'container my-28'}>
-        <h2 className='text-c-blue text-center text-6xl font-extrabold pb-10'>
+        <h2 className='text-c-blue text-center text-5xl font-extrabold pb-10'>
           Con cacao podés
         </h2>
         <div className={'flex justify-center text-2xl gap-4 my-16'}>
           <div className={'text-center'}>
-            <span className='mdi mdi-bullseye-arrow text-white bg-c-blue text-8xl rounded p-4' />
+            <span className='mdi mdi-bullseye-arrow text-white bg-c-blue text-6xl rounded p-4' />
             <div className='my-14'>
-              <p className='text-c-blue font-medium text-4xl'>
+              <p className='text-c-blue font-medium text-2xl'>
                 Realizar publicidad dirigida
                 <ResponsiveLineBreak />
                 {/* Aca debriamos poner 'y ...' */}
@@ -96,20 +96,20 @@ const Home: NextPage = () => {
         </div>
         <div className={'flex justify-center text-2xl my-16'}>
           <div className={'text-center'}>
-            <span className='mdi mdi-account-supervisor-circle text-white bg-c-blue text-8xl rounded p-4' />
+            <span className='mdi mdi-account-supervisor-circle text-white bg-c-blue text-6xl rounded p-4' />
             <div className='my-14'>
-              <p className='text-c-blue font-medium text-4xl'>
-                Llevar un control del personal <br /> y de los estándares de la marca
+              <p className='text-c-blue font-medium text-2xl'>
+                Llevar un control del personal y de los estándares de la marca
               </p>
             </div>
           </div>
         </div>
         <div className={'flex justify-center text-2xl'}>
           <div className={'text-center'}>
-            <span className='mdi mdi-map-marker-star text-white bg-c-blue text-8xl rounded p-4' />
+            <span className='mdi mdi-map-marker-star text-white bg-c-blue text-6xl rounded p-4' />
             <div className='my-14'>
-              <p className='mx-auto text-c-blue font-medium text-4xl'>
-                Gestionar las críticas negativas <br /> y aumentar las positivas
+              <p className='mx-auto text-c-blue font-medium text-2xl'>
+                Gestionar las críticas negativas y aumentar las positivas
               </p>
             </div>
           </div>
