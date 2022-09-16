@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { Carousel } from 'react-bootstrap';
 /* Images */
 import Dasboard from 'public/assets/dashboard.svg'
+// import Dasboard from 'public/assets/dashboard.png'
 import Iphones from 'public/assets/iphones.png'
 import Encuestas from 'public/assets/img-compras.png'
 import GoogleReviewsYellow from 'public/assets/google-reviews-yellow.png'
@@ -41,7 +42,7 @@ const Home: NextPage = () => {
             <h1 className={"uppercase font-bold text-2xl"}>Plataforma web para vendedores</h1>
           </div>
           <div className='mt-20 text-center'>
-            <Image src={Dasboard} alt={'Cacao métricas'} />
+            <Image src={Dasboard} alt={'Cacao métricas'} quality={100} />
           </div>
         </div>
       </div>
