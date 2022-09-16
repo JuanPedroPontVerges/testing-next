@@ -22,6 +22,7 @@ import Line from '@/components/Line';
 import ResponsiveLineBreak from '@/components/ResponsiveLineBreak';
 import Form from '@/components/Form';
 import Head from 'next/head';
+import Carrousel from '@/components/Carrousel';
 
 const Home: NextPage = () => {
   return (
@@ -139,23 +140,23 @@ const Home: NextPage = () => {
           </Button>
         </div>
       </div>
-      <div className='my-32' />
+      {/* <div className='my-32' /> */}
       {/* Google Reviews */}
-      <div className="container mx-auto">
+      {/* <div className="container mx-auto">
         <div className={'flex flex-row justify-around'}>
           <div className='flex flex-col items-center md:items-start'>
             <div>
-              {/* <Title color={'#F88600'}>
+              <Title color={'#F88600'}>
                 Encuesta customizable
-              </Title> */}
+              </Title>
             </div>
             <p className={'text-3xl text-black text-[32px] sm:text-center md:text-left font-light'}>
               Diferentes opciones, adaptables a tus necesidades.
             </p>
             <div className={'pb-1'} />
-            {/* <div className={'md:m-auto'}>
+            <div className={'md:m-auto'}>
               <Image src={GoogleReviewsYellow} alt={'Logo de Google Reviews'} />
-            </div> */}
+            </div>
             <p className={'text-3xl text-[#717171] text-[32px] font-extrabold text-center md:text-left'}>
               Mejorá las reseñas de Google Reviews
             </p>
@@ -170,7 +171,7 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
-      <div className='my-20' />
+      <div className='my-20' /> */}
       {/* Campañas Marketing */}
       {/* <div className="container mx-auto"> Commenting this for now beacause i dont know why i put it there
         <div className={'flex flex-row justify-around align-middle'}>
@@ -198,7 +199,6 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div> */}
-      <div className='py-20' />
       {/* Dashboard */}
       {/* <div className={'flex justify-around lg:pr-60 sm:pr-20 bg-pink-decoration bg-no-repeat bg-left-top'}>
         <div className='basis-2/3 flex flex-col items-center'>
@@ -237,28 +237,7 @@ const Home: NextPage = () => {
       </div>
       {/* Carrousel customers */}
       <div className="container bg-[#ECF7FF] ">
-        <div className={'flex flex-col p-6'}>
-          <div>
-            <h3 className={'font-regular text-4xl text-center text-[#343252]'}>Algunos de nuestros <strong className='font-black'>clientes</strong></h3>
-          </div>
-        </div>
-        <div className='flex gap-4 overflow-x-auto snap-mandatory'>
-          <div className={'py-4 px-2 text-center bg-white rounded text-black snap-start'}>
-            <Image src={JuanPedro} alt={'testing'} layout={'fixed'} />
-          </div>
-          <div className={'py-4 px-2 text-center bg-white rounded text-black snap-start'}>
-            <Image src={JuanPedro} alt={'testing'} layout={'fixed'} />
-          </div>
-          <div className={'py-4 px-2 text-center bg-white rounded text-black snap-start'}>
-            <Image src={JuanPedro} alt={'testing'} layout={'fixed'} />
-          </div>
-          <div className={'py-4 px-2 text-center bg-white rounded text-black snap-start'}>
-            <Image src={JuanPedro} alt={'testing'} layout={'fixed'} />
-          </div>
-          <div className={'py-4 px-2 text-center bg-white rounded text-black snap-start'}>
-            <Image src={JuanPedro} alt={'testing'} layout={'fixed'} />
-          </div>
-        </div>
+        <Carrousel />
       </div>
       {/* Pricing */}
       <div className={'flex flex-col bg-[#27253B] p-8'}>
