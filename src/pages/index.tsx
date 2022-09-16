@@ -2,8 +2,8 @@ import type { NextPage } from 'next'
 import Image from 'next/image';
 import { Carousel } from 'react-bootstrap';
 /* Images */
-import Dasboard from 'public/assets/dashboard.svg'
-// import Dasboard from 'public/assets/dashboard.png'
+// import Dasboard from 'public/assets/dashboard.svg'
+import Dasboard from 'public/assets/dashboard.png'
 import Iphones from 'public/assets/iphones.png'
 import Encuestas from 'public/assets/img-compras.png'
 import GoogleReviewsYellow from 'public/assets/google-reviews-yellow.png'
@@ -50,7 +50,7 @@ const Home: NextPage = () => {
       {/* Request your demo */}
       <div className={'bg-white container mx-auto'}>
         <div className='flex flex-col text-center'>
-          <h2 className='text-6xl font-extrabold'>
+          <h2 className='text-5xl font-extrabold'>
             <span className='text-c-blue'>
               Todo lo que tú{' '}
               <ResponsiveLineBreak />
