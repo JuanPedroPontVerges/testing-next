@@ -9,13 +9,6 @@ body {
   overscroll-behavior-y: none;
 }
 
-/* Bootstrap carousell style changes */
-.carousel-indicators button {
-  width: 11px !important;
-  height: 11px !important;
-  border-radius: 100%;
-}
-
 .fit-content {
   width: fit-content;
 }

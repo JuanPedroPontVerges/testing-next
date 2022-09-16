@@ -1,6 +1,5 @@
 import type { NextPage } from 'next'
 import Image from 'next/image';
-import { Carousel } from 'react-bootstrap';
 /* Images */
 import JuanPedro from 'public/assets/juan-pedro.png'
 import Dasboard from 'public/assets/dashboard.svg'
@@ -236,55 +235,12 @@ const Home: NextPage = () => {
           </div> */}
       {/* </div>
       </div>
-      <div className='p-4' /> */}
-      {/* Carrousel || Commenting for now because it breaks viewport in mobile*/}
-      {/* <div className={'flex flex-row bg-[#27253B]'}> 
-        <div className={'basis-2/3'}>
-          <Carousel controls={false} interval={2500} draggable>
-            <Carousel.Item>
-              <div className='flex flex-col items-center justify-center h-[500px]'>
-                <Image src={HandWithCoin} alt={'Mano con moneda'} />
-                <h3 className={'mt-4 text-[28px] font-medium text-center'}>Elegí tus beneficios</h3>
-              </div>
-            </Carousel.Item>
-            <Carousel.Item>
-              <div className='flex flex-col items-center justify-center h-[500px]'>
-                <Image src={Community} alt={'Comunidad Cacao'} />
-                <h3 className={'mt-4 text-[28px] font-medium text-center'}>Conocé a tus clientes</h3>
-              </div>
-            </Carousel.Item>
-          </Carousel>
-        </div>
-        <div className={'basis-1/3 flex flex-col justify-around'}>
-          <h2 className={'text-c-yellow font-black text-6xl'}>
-            Cualquier <br /> tipo de <br /> comercio
-          </h2>
-          <p className={'text-2xl'}>
-            Nos adaptamos a cualquier <br /> tipo de comercio. Con Cacao, <br />
-            <strong> tu cliente con vos.</strong>
-          </p>
-        </div>
-      </div> */}
       {/* Carrousel customers */}
       <div className="container bg-[#ECF7FF] ">
         <div className={'flex flex-col p-6'}>
           <div>
             <h3 className={'font-regular text-4xl text-center text-[#343252]'}>Algunos de nuestros <strong className='font-black'>clientes</strong></h3>
           </div>
-          {/* <div>
-            <Carousel controls={false} interval={2500} draggable>
-              <Carousel.Item>
-                <div className='flex flex-col items-center justify-center h-[500px] text-black'>
-                  <h3 className={'mt-4 text-[28px] font-medium text-center'}>Elegí tus beneficios</h3>
-                </div>
-              </Carousel.Item>
-              <Carousel.Item>
-                <div className='flex flex-col items-center justify-center h-[500px] text-black'>
-                  <h3 className={'mt-4 text-[28px] font-medium text-center'}>Conocé a tus clientes</h3>
-                </div>
-              </Carousel.Item>
-            </Carousel>
-          </div> */}
         </div>
         <div className='flex gap-4 overflow-x-auto snap-mandatory'>
           <div className={'py-4 px-2 text-center bg-white rounded text-black snap-start'}>
@@ -314,25 +270,6 @@ const Home: NextPage = () => {
         <div className={'mx-auto'}>
           <Line className='w-24 border-4 border-[#F08619]/[.30]' />
         </div>
-        {/* <div>
-            <Carousel controls={false} interval={2500} draggable>
-              <Carousel.Item>
-                <div className='flex flex-col items-center justify-center h-40'>
-                  <h3 className={'mt-4 text-[28px] font-medium text-center'}>Encuestas</h3>
-                </div>
-              </Carousel.Item>
-              <Carousel.Item>
-                <div className='flex flex-col items-center justify-center h-40'>
-                  <h3 className={'mt-4 text-[28px] font-medium text-center'}>Códigos QR</h3>
-                </div>
-              </Carousel.Item>
-              <Carousel.Item>
-                <div className='flex flex-col items-center justify-center h-40'>
-                  <h3 className={'mt-4 text-[28px] font-medium text-center'}>Métricas</h3>
-                </div>
-              </Carousel.Item>
-            </Carousel>
-          </div> */}
         <div className={'p-4'} />
         <div className='text-center'>
           <h3 className={'font-black text-3xl'}>1 mes de garantia</h3>
