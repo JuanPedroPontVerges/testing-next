@@ -31,14 +31,14 @@ const Home: NextPage = () => {
       </Head>
       <div className={'bg-c-blue'}>
         {/* Banner */}
-        <div className="container mx-auto pt-24">
+        <div className="container mx-auto pt-14">
           <div className='flex justify-around'>
-            <h2 className='text-c-yellow text-6xl font-extrabold pt-20'>
+            <h2 className='text-c-yellow text-5xl font-extrabold pt-20'>
               Tu cliente, con vos
             </h2>
           </div>
           <div className='flex justify-around'>
-            <h1 className={"uppercase font-bold text-3xl"}>Plataforma web para vendedores</h1>
+            <h1 className={"uppercase font-bold text-2xl"}>Plataforma web para vendedores</h1>
           </div>
           <div className='mt-20 text-center'>
             <Image src={Dasboard} alt={'Cacao métricas'} />
