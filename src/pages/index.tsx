@@ -57,13 +57,13 @@ const Home: NextPage = () => {
             </span>
             <ResponsiveLineBreak />
           </h2>
-          <div className={'flex justify-center'}>
+          {/* <div className={'flex justify-center'}>
             <div className='bg-c-blue p-2 rounded fit-content'>
               <h2 className='text-white text-6xl font-extrabold'>
                 para incrementar ventas
               </h2>
             </div>
-          </div>
+          </div> */}
         </div>
         <div className='m-20' />
         <div className='flex justify-center'>
@@ -147,17 +147,17 @@ const Home: NextPage = () => {
         <div className={'flex flex-row justify-around'}>
           <div className='flex flex-col items-center md:items-start'>
             <div>
-              <Title color={'#F88600'}>
+              {/* <Title color={'#F88600'}>
                 Encuesta customizable
-              </Title>
+              </Title> */}
             </div>
             <p className={'text-3xl text-black text-[32px] sm:text-center md:text-left font-light'}>
               Diferentes opciones, adaptables a tus necesidades.
             </p>
             <div className={'pb-1'} />
-            <div className={'md:m-auto'}>
+            {/* <div className={'md:m-auto'}>
               <Image src={GoogleReviewsYellow} alt={'Logo de Google Reviews'} />
-            </div>
+            </div> */}
             <p className={'text-3xl text-[#717171] text-[32px] font-extrabold text-center md:text-left'}>
               Mejorá las reseñas de Google Reviews
             </p>
@@ -207,7 +207,7 @@ const Home: NextPage = () => {
           <Image src={Macbook} alt={'Cacao dashboard en una Macbook'} height={419} />
         </div>
         <div className='text-left basis-1/3 flex flex-col justify-around gap-20'>
-          <div>
+          {/* <div>
             <Title color={'#F88600'}>
               <span className='text-[#27253B]'>Toda la <br /> información <br /> </span> en un solo lugar
             </Title>
@@ -216,8 +216,8 @@ const Home: NextPage = () => {
             <p className={'text-3xl text-[#353535] font-medium'}>
               Tendrás acceso a un panel de control, dónde podrás ver:
             </p>
-          </div>
-          <div className={'flex flex-row justify-around font-semibold'}>
+          </div> */}
+          {/* <div className={'flex flex-row justify-around font-semibold'}>
             <div className={'text-center'}>
               <Image src={HumanInCircle} alt={'persona en un circulo, icono'} />
               <p className='text-[#353535]'>Clientes Frecuentes</p>
@@ -234,7 +234,7 @@ const Home: NextPage = () => {
               <Image src={TrendingArrow} alt={'persona en un circulo, icono'} />
               <p className='text-[#353535]'>Analisis de datos</p>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className='p-4' />
@@ -272,20 +272,20 @@ const Home: NextPage = () => {
         <div>
           <h3 className={'font-regular text-4xl text-center text-[#343252]'}>Algunos de nuestros <strong className='font-black'>clientes</strong></h3>
         </div>
-        <div>
-          <Carousel controls={false} interval={2500} draggable>
-            <Carousel.Item>
-              <div className='flex flex-col items-center justify-center h-[500px] text-black'>
-                <h3 className={'mt-4 text-[28px] font-medium text-center'}>Elegí tus beneficios</h3>
-              </div>
-            </Carousel.Item>
-            <Carousel.Item>
-              <div className='flex flex-col items-center justify-center h-[500px] text-black'>
-                <h3 className={'mt-4 text-[28px] font-medium text-center'}>Conocé a tus clientes</h3>
-              </div>
-            </Carousel.Item>
-          </Carousel>
-        </div>
+        {/* <div>
+            <Carousel controls={false} interval={2500} draggable>
+              <Carousel.Item>
+                <div className='flex flex-col items-center justify-center h-[500px] text-black'>
+                  <h3 className={'mt-4 text-[28px] font-medium text-center'}>Elegí tus beneficios</h3>
+                </div>
+              </Carousel.Item>
+              <Carousel.Item>
+                <div className='flex flex-col items-center justify-center h-[500px] text-black'>
+                  <h3 className={'mt-4 text-[28px] font-medium text-center'}>Conocé a tus clientes</h3>
+                </div>
+              </Carousel.Item>
+            </Carousel>
+          </div> */}
       </div>
       {/* Pricing */}
       <div className={'flex flex-col bg-[#27253B] p-8'}>
@@ -297,25 +297,25 @@ const Home: NextPage = () => {
         <div className={'mx-auto'}>
           <Line className='w-24 border-4 border-[#F08619]/[.30]' />
         </div>
-        <div>
-          <Carousel controls={false} interval={2500} draggable>
-            <Carousel.Item>
-              <div className='flex flex-col items-center justify-center h-40'>
-                <h3 className={'mt-4 text-[28px] font-medium text-center'}>Encuestas</h3>
-              </div>
-            </Carousel.Item>
-            <Carousel.Item>
-              <div className='flex flex-col items-center justify-center h-40'>
-                <h3 className={'mt-4 text-[28px] font-medium text-center'}>Códigos QR</h3>
-              </div>
-            </Carousel.Item>
-            <Carousel.Item>
-              <div className='flex flex-col items-center justify-center h-40'>
-                <h3 className={'mt-4 text-[28px] font-medium text-center'}>Métricas</h3>
-              </div>
-            </Carousel.Item>
-          </Carousel>
-        </div>
+        {/* <div>
+            <Carousel controls={false} interval={2500} draggable>
+              <Carousel.Item>
+                <div className='flex flex-col items-center justify-center h-40'>
+                  <h3 className={'mt-4 text-[28px] font-medium text-center'}>Encuestas</h3>
+                </div>
+              </Carousel.Item>
+              <Carousel.Item>
+                <div className='flex flex-col items-center justify-center h-40'>
+                  <h3 className={'mt-4 text-[28px] font-medium text-center'}>Códigos QR</h3>
+                </div>
+              </Carousel.Item>
+              <Carousel.Item>
+                <div className='flex flex-col items-center justify-center h-40'>
+                  <h3 className={'mt-4 text-[28px] font-medium text-center'}>Métricas</h3>
+                </div>
+              </Carousel.Item>
+            </Carousel>
+          </div> */}
         <div className={'p-4'} />
         <div className='text-center'>
           <h3 className={'font-black text-3xl'}>1 mes de garantia</h3>
