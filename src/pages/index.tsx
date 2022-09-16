@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import Image from 'next/image';
 import { Carousel } from 'react-bootstrap';
 /* Images */
+import JuanPedro from 'public/assets/juan-pedro.png'
 import Dasboard from 'public/assets/dashboard.svg'
 // import Dasboard from 'public/assets/dashboard.png'
 import Iphones from 'public/assets/iphones.png'
@@ -80,7 +81,7 @@ const Home: NextPage = () => {
       </div>
       <div className={'container my-28'}>
         <h2 className='text-c-blue text-center text-5xl font-extrabold pb-10'>
-          Con cacao podés
+          Con Cacao podés
         </h2>
         <div className={'flex justify-center text-2xl gap-4 my-16'}>
           <div className={'text-center'}>
@@ -115,17 +116,14 @@ const Home: NextPage = () => {
           </div>
         </div>
       </div>
-      <div className='p-4' />
       { /* Encuestas*/}
-      <div className='m-20' />
-      {/* Request your demo */}
       <div className={'bg-white container mx-auto'}>
         <div className='flex flex-col text-center gap-y-6'>
-          <h2 className='text-c-yellow text-6xl font-extrabold text-center'>
+          <h2 className='text-c-yellow text-5xl font-extrabold text-center'>
             Encuestas
           </h2>
           <div className={'flex justify-center'}>
-            <p className={'text-3xl text-black text-center'}>
+            <p className={'text-2xl text-black text-center'}>
               Tus clientes acceden a una <strong>breve encuesta</strong>{' '}
               <ResponsiveLineBreak />donde <strong>evalúan su experiencia</strong> y, a cambio,<ResponsiveLineBreak />
               <strong> obtienen un beneficio </strong> para utilizar <ResponsiveLineBreak /> en su próxima compra.
@@ -175,7 +173,7 @@ const Home: NextPage = () => {
       </div>
       <div className='my-20' />
       {/* Campañas Marketing */}
-      <div className="container mx-auto">
+      {/* <div className="container mx-auto"> Commenting this for now beacause i dont know why i put it there
         <div className={'flex flex-row justify-around align-middle'}>
           <div>
             <div className='flex flex-col justify-center h-full'>
@@ -200,15 +198,15 @@ const Home: NextPage = () => {
             <Image src={WhatsappScreens} alt={'Preview de video'} />
           </div>
         </div>
-      </div>
+      </div> */}
       <div className='py-20' />
       {/* Dashboard */}
-      <div className={'flex justify-around lg:pr-60 sm:pr-20 bg-pink-decoration bg-no-repeat bg-left-top'}>
+      {/* <div className={'flex justify-around lg:pr-60 sm:pr-20 bg-pink-decoration bg-no-repeat bg-left-top'}>
         <div className='basis-2/3 flex flex-col items-center'>
           <Image src={Macbook} alt={'Cacao dashboard en una Macbook'} height={419} />
         </div>
-        <div className='text-left basis-1/3 flex flex-col justify-around gap-20'>
-          {/* <div>
+        <div className='text-left basis-1/3 flex flex-col justify-around gap-20'> */}
+      {/* <div>
             <Title color={'#F88600'}>
               <span className='text-[#27253B]'>Toda la <br /> información <br /> </span> en un solo lugar
             </Title>
@@ -218,7 +216,7 @@ const Home: NextPage = () => {
               Tendrás acceso a un panel de control, dónde podrás ver:
             </p>
           </div> */}
-          {/* <div className={'flex flex-row justify-around font-semibold'}>
+      {/* <div className={'flex flex-row justify-around font-semibold'}>
             <div className={'text-center'}>
               <Image src={HumanInCircle} alt={'persona en un circulo, icono'} />
               <p className='text-[#353535]'>Clientes Frecuentes</p>
@@ -236,9 +234,9 @@ const Home: NextPage = () => {
               <p className='text-[#353535]'>Analisis de datos</p>
             </div>
           </div> */}
-        </div>
+      {/* </div>
       </div>
-      <div className='p-4' />
+      <div className='p-4' /> */}
       {/* Carrousel || Commenting for now because it breaks viewport in mobile*/}
       {/* <div className={'flex flex-row bg-[#27253B]'}> 
         <div className={'basis-2/3'}>
@@ -251,7 +249,7 @@ const Home: NextPage = () => {
             </Carousel.Item>
             <Carousel.Item>
               <div className='flex flex-col items-center justify-center h-[500px]'>
-                <Image src={Community} alt={'Comunidad cacao'} />
+                <Image src={Community} alt={'Comunidad Cacao'} />
                 <h3 className={'mt-4 text-[28px] font-medium text-center'}>Conocé a tus clientes</h3>
               </div>
             </Carousel.Item>
@@ -268,12 +266,12 @@ const Home: NextPage = () => {
         </div>
       </div> */}
       {/* Carrousel customers */}
-      <div className={'flex flex-col bg-[#ECF7FF] p-6'}>
-        <div className='p-4' />
-        <div>
-          <h3 className={'font-regular text-4xl text-center text-[#343252]'}>Algunos de nuestros <strong className='font-black'>clientes</strong></h3>
-        </div>
-        {/* <div>
+      <div className="container bg-[#ECF7FF] ">
+        <div className={'flex flex-col p-6'}>
+          <div>
+            <h3 className={'font-regular text-4xl text-center text-[#343252]'}>Algunos de nuestros <strong className='font-black'>clientes</strong></h3>
+          </div>
+          {/* <div>
             <Carousel controls={false} interval={2500} draggable>
               <Carousel.Item>
                 <div className='flex flex-col items-center justify-center h-[500px] text-black'>
@@ -287,6 +285,24 @@ const Home: NextPage = () => {
               </Carousel.Item>
             </Carousel>
           </div> */}
+        </div>
+        <div className='flex gap-4 overflow-x-auto snap-mandatory'>
+          <div className={'py-4 px-2 text-center bg-white rounded text-black snap-start'}>
+            <Image src={JuanPedro} alt={'testing'} layout={'fixed'} />
+          </div>
+          <div className={'py-4 px-2 text-center bg-white rounded text-black snap-start'}>
+            <Image src={JuanPedro} alt={'testing'} layout={'fixed'} />
+          </div>
+          <div className={'py-4 px-2 text-center bg-white rounded text-black snap-start'}>
+            <Image src={JuanPedro} alt={'testing'} layout={'fixed'} />
+          </div>
+          <div className={'py-4 px-2 text-center bg-white rounded text-black snap-start'}>
+            <Image src={JuanPedro} alt={'testing'} layout={'fixed'} />
+          </div>
+          <div className={'py-4 px-2 text-center bg-white rounded text-black snap-start'}>
+            <Image src={JuanPedro} alt={'testing'} layout={'fixed'} />
+          </div>
+        </div>
       </div>
       {/* Pricing */}
       <div className={'flex flex-col bg-[#27253B] p-8'}>
