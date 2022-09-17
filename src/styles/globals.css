@@ -13,11 +13,11 @@ body {
   width: fit-content;
 }
 
-.items:last-child {
+.carousel-container:last-child {
   padding-right: 120px;
 }
 
-.items div {
+/* .items div {
   padding: 60px 20px;
   text-align: center;
   background-color: #fff;
@@ -32,8 +32,4 @@ body {
   gap: 20px;
   overflow-x: auto;
   scroll-snap-type: x mandatory;
-}
-
-.carousel-indicators {
-  margin: -4px;
-}
+} */

@@ -35,12 +35,12 @@ const Home: NextPage = () => {
         {/* Banner */}
         <div className="container mx-auto pt-14">
           <div className='flex justify-around'>
-            <h2 className='text-c-yellow text-5xl font-extrabold pt-20'>
+            <h2 className='text-c-yellow text-4xl font-extrabold pt-20'>
               Tu cliente, con vos
             </h2>
           </div>
           <div className='flex justify-around'>
-            <h1 className={"uppercase font-bold text-2xl"}>Plataforma web para vendedores</h1>
+            <h1 className={"uppercase font-bold text-1xl"}>Plataforma web para vendedores</h1>
           </div>
           <div className='mt-20 text-center'>
             <Image src={Dasboard} alt={'Cacao métricas'} quality={100} />
@@ -51,7 +51,7 @@ const Home: NextPage = () => {
       {/* Request your demo */}
       <div className={'bg-white container mx-auto'}>
         <div className='flex flex-col text-center'>
-          <h2 className='text-5xl font-extrabold'>
+          <h2 className='text-4xl font-extrabold'>
             <span className='text-c-blue'>
               Todo lo que tú{' '}
               <ResponsiveLineBreak />
@@ -80,10 +80,10 @@ const Home: NextPage = () => {
         </div>
       </div>
       <div className={'container my-28'}>
-        <h2 className='text-c-blue text-center text-5xl font-extrabold pb-10'>
+        <h2 className='text-c-blue text-center text-4xl font-extrabold pb-10'>
           Con Cacao podés
         </h2>
-        <div className={'flex justify-center text-2xl gap-4 my-16'}>
+        <div className={'flex justify-center gap-4 my-16'}>
           <div className={'text-center'}>
             <span className='mdi mdi-bullseye-arrow text-white bg-c-blue text-6xl rounded p-4' />
             <div className='my-14'>
@@ -119,11 +119,11 @@ const Home: NextPage = () => {
       { /* Encuestas*/}
       <div className={'bg-white container mx-auto'}>
         <div className='flex flex-col text-center gap-y-6'>
-          <h2 className='text-c-yellow text-5xl font-extrabold text-center'>
+          <h2 className='text-c-yellow text-4xl font-extrabold text-center'>
             Encuestas
           </h2>
           <div className={'flex justify-center'}>
-            <p className={'text-2xl text-black text-center'}>
+            <p className={'text-1xl text-black text-center'}>
               Tus clientes acceden a una <strong>breve encuesta</strong>{' '}
               <ResponsiveLineBreak />donde <strong>evalúan su experiencia</strong> y, a cambio,<ResponsiveLineBreak />
               <strong> obtienen un beneficio </strong> para utilizar <ResponsiveLineBreak /> en su próxima compra.
@@ -237,7 +237,7 @@ const Home: NextPage = () => {
       </div>
       {/* Carrousel customers */}
       <div className="container bg-[#ECF7FF] ">
-        <Carrousel />
+        <Carrousel title='Nuestros clientes' />
       </div>
       {/* Pricing */}
       <div className={'flex flex-col bg-[#27253B] p-8'}>
