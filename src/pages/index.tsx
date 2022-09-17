@@ -5,7 +5,7 @@ import JuanPedro from 'public/assets/juan-pedro.png'
 import Dasboard from 'public/assets/dashboard.svg'
 // import Dasboard from 'public/assets/dashboard.png'
 import Iphones from 'public/assets/iphones.png'
-import Encuestas from 'public/assets/img-compras.png'
+import Encuestas from 'public/assets/encuestas.png'
 import GoogleReviewsYellow from 'public/assets/google-reviews-yellow.png'
 import VideoPreview from 'public/assets/preview-video.png';
 import WhatsappScreens from 'public/assets/pantallas-whatsapp.png';
@@ -87,7 +87,7 @@ const Home: NextPage = () => {
           <div className={'text-center'}>
             <span className='mdi mdi-bullseye-arrow text-white bg-c-blue text-6xl rounded p-4' />
             <div className='my-14'>
-              <p className='text-c-blue font-medium text-2xl'>
+              <p className='text-c-blue font-medium text-1xl'>
                 Realizar publicidad dirigida
                 <ResponsiveLineBreak />
                 {/* Aca debriamos poner 'y ...' */}
@@ -95,21 +95,21 @@ const Home: NextPage = () => {
             </div>
           </div>
         </div>
-        <div className={'flex justify-center text-2xl my-16'}>
+        <div className={'flex justify-center my-16'}>
           <div className={'text-center'}>
             <span className='mdi mdi-account-supervisor-circle text-white bg-c-blue text-6xl rounded p-4' />
             <div className='my-14'>
-              <p className='text-c-blue font-medium text-2xl'>
+              <p className='text-c-blue font-medium text-1xl'>
                 Llevar un control del personal y de los estándares de la marca
               </p>
             </div>
           </div>
         </div>
-        <div className={'flex justify-center text-2xl'}>
+        <div className={'flex justify-center'}>
           <div className={'text-center'}>
             <span className='mdi mdi-map-marker-star text-white bg-c-blue text-6xl rounded p-4' />
             <div className='my-14'>
-              <p className='mx-auto text-c-blue font-medium text-2xl'>
+              <p className='mx-auto text-c-blue font-medium text-1xl'>
                 Gestionar las críticas negativas y aumentar las positivas
               </p>
             </div>
@@ -132,7 +132,7 @@ const Home: NextPage = () => {
         </div>
         <div className='m-20' />
         <div className='flex justify-center'>
-          <Image src={Encuestas} alt={'Lugares por el cual acceder a la encuesta'} />
+          <Image src={Encuestas} alt={'Lugares por el cual acceder a la encuesta'}/>
         </div>
         <div className='flex justify-center my-12'>
           <Button>
