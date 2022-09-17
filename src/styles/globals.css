@@ -13,6 +13,27 @@ body {
   width: fit-content;
 }
 
+.items:last-child {
+  padding-right: 120px;
+}
+
+.items div {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 10px;
+  min-width: 250px;
+  scroll-snap-align: start;
+  color: black;
+}
+
+.items {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+}
+
 .carousel-indicators {
   margin: -4px;
 }
