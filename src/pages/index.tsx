@@ -2,7 +2,7 @@ import type { NextPage } from 'next'
 import Image from 'next/image';
 /* Images */
 import JuanPedro from 'public/assets/juan-pedro.png'
-import Dasboard from 'public/assets/dashboard.svg'
+import Dasboard from 'public/assets/dashboard.png'
 // import Dasboard from 'public/assets/dashboard.png'
 import Iphones from 'public/assets/iphones.png'
 import Encuestas from 'public/assets/encuestas.png'
