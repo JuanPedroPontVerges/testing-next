@@ -1,22 +1,10 @@
 import type { NextPage } from 'next'
 import Image from 'next/image';
 /* Images */
-import JuanPedro from 'public/assets/juan-pedro.png'
 import Dasboard from 'public/assets/dashboard.png'
-// import Dasboard from 'public/assets/dashboard.png'
 import Iphones from 'public/assets/iphones.png'
 import Encuestas from 'public/assets/encuestas.png'
-import GoogleReviewsYellow from 'public/assets/google-reviews-yellow.png'
-import VideoPreview from 'public/assets/preview-video.png';
-import WhatsappScreens from 'public/assets/pantallas-whatsapp.png';
-import Macbook from 'public/assets/macbook.png';
-import HumanInCircle from 'public/assets/persona-en-circulo.png';
-import MotorcycleInCircle from 'public/assets/moto-en-circulo.png';
-import TrendingArrow from 'public/assets/flecha-tendencia.png';
-import HandWithCoin from 'public/assets/mano-con-moneda.png';
-import Community from 'public/assets/comunidad.png';
 /* Components */
-import Title from '@/components/Title';
 import Button from '@/components/Button';
 import Line from '@/components/Line';
 import ResponsiveLineBreak from '@/components/ResponsiveLineBreak';

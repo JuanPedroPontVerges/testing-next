@@ -1,8 +1,8 @@
 import Image, { StaticImageData } from "next/image";
 import React from "react"
 import Instagram from 'public/assets/instagram.png';
-import LinkedinSvg from 'public/assets/linkedin.svg';
-import TwitterSvg from 'public/assets/twitter.svg';
+import LinkedinSvg from 'public/assets/linkedin.png';
+import TwitterSvg from 'public/assets/twitter.png';
 import Link from "next/link";
 interface TeamMemberCardProps {
     imgUrl: StaticImageData;
@@ -17,7 +17,7 @@ const TeamMemberCard: React.FC<TeamMemberCardProps> = ({ className, imgUrl, full
     return (
         <div className={`rounded-[20px] drop-shadow-2xl border-black bg-white p-2 sm:p-0 ${className}`}>
             <div className="flex flex-col text-center">
-                <Image src={imgUrl} alt={'Foto de perfil'} layout={'responsive'} />
+                <Image src={imgUrl} alt={'Foto de perfil'} layout={'responsive'} quality={100} />
                 <div className={'py-1'} />
                 <h3 className={'text-[#343434] font-bold text-2xl'}>{fullName}</h3>
                 <h5 className={'text-[#F88600] font-bold text-xs'}>{role}</h5>

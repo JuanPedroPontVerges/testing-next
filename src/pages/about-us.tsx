@@ -9,12 +9,12 @@ import Lightbulb from 'public/assets/lightbulb.png';
 import Team from 'public/assets/team.png';
 import TeamIcon from 'public/assets/equipo.svg';
 // Team Members
-import JuanPedro from 'public/assets/juan-pedro.svg';
-import Augusto from 'public/assets/augustus.svg';
-import Emilio from 'public/assets/emilio.svg';
-import Paula from 'public/assets/paula.svg';
-import Ramiro from 'public/assets/ramiro.svg';
-import Luciana from 'public/assets/luciana.svg';
+import JuanPedro from 'public/assets/juan-pedro.png';
+import Augusto from 'public/assets/augustus.png';
+import Emilio from 'public/assets/emilio.png';
+import Paula from 'public/assets/paula.png';
+import Ramiro from 'public/assets/ramiro.png';
+import Luciana from 'public/assets/luciana.png';
 /* Components */
 import TeamMemberCard from "@/components/TeamMemberCard";
 

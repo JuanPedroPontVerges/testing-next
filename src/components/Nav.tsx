@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { useState } from 'react';
-import LogoCacaoHorizontal from 'public/assets/logo-cacao-horizontal.svg';
+import LogoCacaoHorizontal from 'public/assets/logo-cacao-horizontal.png';
 import LogoCacaoVertical from 'public/assets/logo-cacao-vertical.png';
 import Image from 'next/image';
 
