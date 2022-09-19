@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Image from 'next/image';
 /* Images */
-import Dasboard from 'public/assets/dashboard.png'
+import Dasboard from 'public/assets/dashboard.svg'
 import Iphones from 'public/assets/iphones.png'
 import Encuestas from 'public/assets/encuestas.png'
 /* Components */
