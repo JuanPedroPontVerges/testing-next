@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import Image from 'next/image';
 /* Images */
-import Dasboard from 'public/assets/dashboard.svg'
+import Dasboard from 'public/assets/dashboard.png'
 import Iphones from 'public/assets/iphones.png'
 import Encuestas from 'public/assets/encuestas.png'
 /* Components */
@@ -120,7 +120,7 @@ const Home: NextPage = () => {
         </div>
         <div className='m-20' />
         <div className='flex justify-center'>
-          <Image src={Encuestas} alt={'Lugares por el cual acceder a la encuesta'}/>
+          <Image src={Encuestas} alt={'Lugares por el cual acceder a la encuesta'} quality={100} />
         </div>
         <div className='flex justify-center my-12'>
           <Button>
@@ -225,7 +225,7 @@ const Home: NextPage = () => {
       </div>
       {/* Carrousel customers */}
       <div className="container bg-[#ECF7FF] ">
-        <Carrousel title='Nuestros clientes' />
+        <Carrousel title='Algunos de nuestros clientes' />
       </div>
       {/* Pricing */}
       <div className={'flex flex-col bg-[#27253B] p-8'}>

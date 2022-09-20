@@ -1,5 +1,7 @@
 import next from 'next';
 import { useState, useRef, useEffect } from 'react';
+import Antares from 'public/assets/customers/antares.jpg';
+import Image from 'next/image';
 
 const Carousel: React.FC<{ title?: string }> = ({ title }) => {
     // const maxScrollWidth = useRef(0);
@@ -68,7 +70,7 @@ const Carousel: React.FC<{ title?: string }> = ({ title }) => {
 
     return (
         <div className="carousel mx-auto">
-            <h2 className="text-4xl font-semibold mb-12 text-c-yellow text-center">
+            <h2 className="text-4xl font-semibold mb-12 pt-4 text-c-blue text-center">
                 {title}
             </h2>
             <div className="relative overflow-auto">
@@ -80,23 +82,13 @@ const Carousel: React.FC<{ title?: string }> = ({ title }) => {
                         return (
                             <div
                                 key={index}
-                                className="carousel-item text-center relative w-64 h-64 snap-start"
+                                className="carousel-item text-center flex w-48 h-48 snap-start border-2 border-stone-50"
                             >
                                 <a
                                     // href={resource.link}
-                                    className="h-full w-full aspect-square block bg-origin-padding bg-left-top bg-cover bg-no-repeat z-0"
-                                // style={{ backgroundImage: `url(${resource.imageUrl || ''})` }}
+                                    className="h-full w-full flex items-center justify-center aspect-square bg-origin-padding bg-left-top bg-cover bg-no-repeat z-0 text-white"
                                 >
-                                    {title}
-                                </a>
-                                <a
-                                    // href={resource.link}
-                                    className="h-full w-full aspect-square block absolute top-0 left-0 bg-black"
-                                >
-                                    <h3 className="text-white py-6 px-3 mx-auto text-xl">
-                                        {title}
-                                        {/* {resource.title} */}
-                                    </h3>
+                                    <Image src={Antares} alt={'Logo de Antares'} />
                                 </a>
                             </div>
                         );
