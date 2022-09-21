@@ -64,17 +64,17 @@ const Nav: React.FC<{}> = ({ }) => {
                         className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${navbar ? 'block' : 'hidden'}`}
                     >
                         <ul className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0 text-1xl md:text-base">
-                            <li className="text-white">
+                            <li className="text-white" onClick={() => setNavbar(false)}>
                                 <Link href="/">
                                     <a>Inicio</a>
                                 </Link>
                             </li>
-                            <li className="text-white">
+                            <li className="text-white" onClick={() => setNavbar(false)}>
                                 <Link href="/about-us">
                                     <a>Sobre Nosotros</a>
                                 </Link>
                             </li>
-                            <li className="text-white">
+                            <li className="text-white" onClick={() => setNavbar(false)}>
                                 <Link href="/">
                                     <a>Contacto</a>
                                 </Link>

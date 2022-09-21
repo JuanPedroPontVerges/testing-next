@@ -9,12 +9,12 @@ import Lightbulb from 'public/assets/lightbulb.png';
 import Team from 'public/assets/team.png';
 import TeamIcon from 'public/assets/equipo.svg';
 // Team Members
-import JuanPedro from 'public/assets/juan-pedro.png';
-import Augusto from 'public/assets/augustus.png';
-import Emilio from 'public/assets/emilio.png';
-import Paula from 'public/assets/paula.png';
-import Ramiro from 'public/assets/ramiro.png';
-import Luciana from 'public/assets/luciana.png';
+import JuanPedro from 'public/assets/team/juan-pedro.png';
+import Augusto from 'public/assets/team/augustus.png';
+import Emilio from 'public/assets/team/emilio.png';
+import Paula from 'public/assets/team/paula.png';
+import Ramiro from 'public/assets/team/ramiro.png';
+import Luciana from 'public/assets/team/luciana.png';
 /* Components */
 import TeamMemberCard from "@/components/TeamMemberCard";
 
@@ -148,8 +148,8 @@ const AboutUs: NextPage = () => {
                         className={'basis-1/3'}
                     />
                     <TeamMemberCard
-                        linkedInUrl={'https://www.linkedin.com/in/juan-pedro-pont-verges-a44630160/'}
-                        twitterUrl={'https://twitter.com/juaanpedro'}
+                        linkedInUrl='https://www.linkedin.com/in/juan-pedro-pont-verges-a44630160/'
+                        twitterUrl='https://twitter.com/juaanpedro'
                         fullName="Paula Mattio"
                         role="UX/UI"
                         imgUrl={Paula}

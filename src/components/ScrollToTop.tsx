@@ -7,9 +7,9 @@ const ScrollToTop: React.FC<{}> = (props) => {
         });
     }
     return (
-        <div className={'px-20'}>
+        <div className={'px-4'}>
             <div className={'grid justify-items-end'}>
-                <button onClick={scrollToTop} className={' h-16 w-16 text-white bg-[#2E2E2E] rounded-t-lg pb-0'}>
+                <button onClick={scrollToTop} className={'h-16 w-16 text-white bg-[#2E2E2E] rounded-t-lg pb-0'}>
                     Subir
                 </button>
             </div>

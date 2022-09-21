@@ -93,93 +93,90 @@ const Form: React.FC<{}> = () => {
     }
 
     return (
-        <div className={'flex flex-col p-8 bg-form bg-no-repeat bg-cover'}>
-            <div className='p-4'>
-                <h3 className={'font-bold text-[40px] text-center text-[#343434]'}>¿Listo para hacer crecer tu comercio? <span className={'text-[#F88600]'}>¡Contactanos!</span></h3>
-            </div>
-            <div className='p-8' />
-            <form onSubmit={sendEmail} className={'flex flex-col items-center text-black'}>
-                <div className={'w-1/2'}>
-                    {/* Datos de Contacto */}
-                    <div>
-                        <h4 className='text-[#343434] font-bold text-2xl'>Datos de contacto</h4>
-                    </div>
-                    <div className={'p-1'} />
-                    <div>
-                        <Input name={'name'} placeholder='Nombre y Apellido' />
-                        <FormErrorMessage>
-                            {errors?.name}
-                        </FormErrorMessage>
-                    </div>
-                    <div className={'p-3'} />
-                    <div className='flex flex-row justify-between gap-4'>
-                        <div>
-                            <Input name={'cp'} placeholder='Cód.área' />
-                        </div>
-                        <div>
-                            <Input name={'phone'} placeholder='Teléfono' />
-                        </div>
-                        <div className={'basis-1/2'}>
-                            <Input name={'email'} placeholder='Correo eletrónico' />
-                            <FormErrorMessage>
-                                {errors?.email}
-                            </FormErrorMessage>
-                        </div>
-                    </div>
-                    {/* Datos del Comercio */}
-                    <div className={'p-3'} />
-                    <div>
-                        <h4 className='text-[#343434] font-bold text-2xl'>Datos del comercio</h4>
-                    </div>
-                    <div className={'p-1'} />
-                    <div>
-                        <Input name={'restaurant'} placeholder='Nombre de la empresa' />
-                        <FormErrorMessage>
-                            {errors?.restaurant}
-                        </FormErrorMessage>
-                        {/* Ubicación */}
-                        <div className={'p-3'} />
-                        <div className='flex flex-row'>
-                            <div className={'basis-1/2'}>
-                                <h4 className='text-[#343434] font-bold text-lg'>Argentina</h4>
-                                <Select name={'country'} options={[{ label: 'Argentina', value: 'Argentina' }]} />
+        <div className={'bg-form bg-no-repeat bg-cover'}>
+            <div className="container mx-auto">
+                <div className="flex justify-center p-4 md:p-0">
+                    <div className={'flex flex-col gap-y-8'}>
+                        <h2 className={'font-bold text-4xl text-center text-[#343434]'}>¿Listo para hacer crecer tu comercio? <span className={'text-c-yellow'}>¡Contactanos!</span></h2>
+                        <form onSubmit={sendEmail}>
+                            {/* Datos de Contacto */}
+                            <h4 className='text-[#343434] font-bold text-2xl'>Datos de contacto</h4>
+                            <div>
+                                <Input name={'name'} placeholder='Nombre y Apellido' />
+                                <FormErrorMessage>
+                                    {errors?.name}
+                                </FormErrorMessage>
                             </div>
-                            <div className={'p-2'} />
-                            <div className={'basis-1/2'}>
-                                <h4 className='text-[#343434] font-bold text-lg'>Provincia</h4>
-                                <Select name={'locality'} options={[{ label: 'Córdoba', value: 'Córdoba' }]} />
+                            <div className={'m-3'} />
+                            <div>
+                                <Input name={'email'} placeholder='Correo eletrónico' />
+                                <FormErrorMessage>
+                                    {errors?.email}
+                                </FormErrorMessage>
                             </div>
-                        </div>
-                        {/* Consulta */}
-                        <div className={'p-3'} />
-                        <div>
-                            <h4 className='text-[#343434] font-bold text-2xl'>Consulta</h4>
-                        </div>
-                        <div>
-                            <TextArea name={'message'} placeholder='Mensaje' rows={10} />
-                            <FormErrorMessage>
-                                {errors?.message}
-                            </FormErrorMessage>
-                        </div>
-                        <div className="font-bold text-green-600 font-3xl text-left pb-2">
-                            {okMessage}
-                        </div>
-                        {/* Commenting this for now because it breaks viewport in mobile */}
-                        {/* <ReCAPTCHA
-                            sitekey="6Ld1AVogAAAAAMQ_WhUMhPkUmyqDYR7fD_zcG6QS"
-                            onChange={onChange}
-                            className="recaptcha"
-                            id="captcha"
-                        /> */}
-                        <div className="error-msg">
-                            {emailError}
-                            {errorMessage}
-                        </div>
-                        <div className={'p-3'} />
-                        <button disabled={isSendFormButtonDisabled} className={`w-full transition-colors ${isSendFormButtonDisabled ? 'bg-gray-400' : 'bg-[#F88600]'} font-bold text-white p-2 rounded-[30px] drop-shadow-[0px_4px_4px_rgba(0,0,0,0.25)]`}>Enviar</button>
+                            <div className={'m-3'} />
+                            <div className='flex flex-row justify-between gap-4'>
+                                <div>
+                                    <Input name={'cp'} placeholder='Cód.área' />
+                                </div>
+                                <div>
+                                    <Input name={'phone'} placeholder='Teléfono' />
+                                </div>
+                            </div>
+                            {/* Datos del Comercio */}
+                            <div className={'p-3'} />
+                            <h4 className='text-[#343434] font-bold text-2xl'>Datos del comercio</h4>
+                            <div className={'p-1'} />
+                            <div>
+                                <Input name={'restaurant'} placeholder='Nombre de la empresa' />
+                                <FormErrorMessage>
+                                    {errors?.restaurant}
+                                </FormErrorMessage>
+                                {/* Ubicación */}
+                                <div className={'p-3'} />
+                                <div className='flex flex-row'>
+                                    <div className={'basis-1/2'}>
+                                        <h4 className='text-[#343434] font-bold text-lg'>Argentina</h4>
+                                        <Select name={'country'} options={[{ label: 'Argentina', value: 'Argentina' }]} />
+                                    </div>
+                                    <div className={'p-2'} />
+                                    <div className={'basis-1/2'}>
+                                        <h4 className='text-[#343434] font-bold text-lg'>Provincia</h4>
+                                        <Select name={'locality'} options={[{ label: 'Córdoba', value: 'Córdoba' }]} />
+                                    </div>
+                                </div>
+                                {/* Consulta */}
+                                <div className={'p-3'} />
+                                <div>
+                                    <h4 className='text-[#343434] font-bold text-2xl'>Consulta</h4>
+                                </div>
+                                <div>
+                                    <TextArea name={'message'} placeholder='Mensaje' rows={10} />
+                                    <FormErrorMessage>
+                                        {errors?.message}
+                                    </FormErrorMessage>
+                                </div>
+                                <div className="font-bold text-green-600 font-3xl text-left pb-2">
+                                    {okMessage}
+                                </div>
+                                {/* Commenting this for now because it breaks viewport in mobile */}
+                                {/* <ReCAPTCHA
+                                    sitekey="6Ld1AVogAAAAAMQ_WhUMhPkUmyqDYR7fD_zcG6QS"
+                                    onChange={onChange}
+                                    className="recaptcha"
+                                    id="captcha"
+                                /> */}
+                                <div className="error-msg">
+                                    {emailError}
+                                    {errorMessage}
+                                </div>
+                                <div className={'p-3'} />
+                                <button className={`w-full transition-colors bg-c-yellow font-bold text-white p-2 rounded-[30px] drop-shadow-[0px_4px_4px_rgba(0,0,0,0.25)]`}>Enviar</button>
+                            </div>
+                        </form>
                     </div>
                 </div>
-            </form>
+            </div>
         </div>
     )
 }

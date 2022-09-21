@@ -8,7 +8,7 @@ interface InputPropsInterface {
 
 const Input: React.FC<InputPropsInterface> = ({ placeholder, type, name }) => {
     return (
-        <input name={name} type={type} placeholder={placeholder} className={'placeholder:text-rounded-lg p-2.5 text-white text-base border-[2px] rounded-[10px] border-[#828384] bg-[#f8fafc] font-light w-full'} />
+        <input name={name} type={type} placeholder={placeholder} className={'p-2.5 text-black text-base border-[2px] rounded-xl border-[#828384] bg-[#f8fafc] font-light w-full placeholder:text-gray-600'} />
     )
 }
 
