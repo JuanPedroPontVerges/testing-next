@@ -13,9 +13,9 @@ body {
   width: fit-content;
 }
 
-.carousel-container:last-child {
-  /* padding-right: 12rem; */
-}
+/* .carousel-container:last-child {
+  padding-right: 12rem;
+} */
 
 /* .items div {
   padding: 60px 20px;

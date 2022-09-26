@@ -60,7 +60,7 @@ const Home: NextPage = () => {
           </Button>
         </div>
       </div>
-      <div className={'container my-28'}>
+      <div className={'container mt-28 mb-22'}>
         <div className={'p-4 md:p-0'}>
           <h2 className='text-c-blue text-center text-4xl font-extrabold pb-10'>
             Con Cacao podés

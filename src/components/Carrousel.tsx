@@ -3,71 +3,56 @@ import { useState, useRef, useEffect } from 'react';
 import Antares from 'public/assets/customers/antares.jpg';
 import Image from 'next/image';
 
+const images = [
+    { src: Antares, alt: 'Logo de Antares' },
+    { src: Antares, alt: 'Logo de Antares' },
+    { src: Antares, alt: 'Logo de Antares' },
+    { src: Antares, alt: 'Logo de Antares' },
+    { src: Antares, alt: 'Logo de Antares' }];
+const delay = 1500;
+
 const Carousel: React.FC<{ title?: string }> = ({ title }) => {
-    const maxScrollWidth = useRef(0);
-    const [currentIndex, setCurrentIndex] = useState(0);
-    const carousel = useRef<any>(null);
+    const timeoutRef = useRef<any>(null);
+    const [index, setIndex] = useState(0);
 
-    const customers = [
-        {
-            id: 1,
-            title: 'Tal cual',
-        },
-        {
-            id: 2,
-            title: 'Tal cual',
-        },
-        {
-            id: 3,
-            title: 'Tal cual',
-        },
-        {
-            id: 4,
-            title: 'Tal cual',
-        },
-    ]
+    function resetTimeout() {
+        if (timeoutRef.current) {
+            clearTimeout(timeoutRef.current);
+        }
+    }
 
-    // const movePrev = () => {
-    //     if (currentIndex > 0) {
-    //         setCurrentIndex((prevState) => prevState - 1);
-    //     }
-    // };
-
-    const moveNext = () => {
-        setCurrentIndex((prevState) => prevState + 1);
-    };
+    const slowdownFirstAndLastImage = (index: number, delay: number) => {
+        return index + 1 === images.length || index === 0 ? delay + 1000 : delay
+    }
 
     useEffect(() => {
-        if (carousel !== null && carousel.current !== null) {
-            carousel.current.scrollLeft = (carousel.current.offsetWidth * currentIndex) / 2;
-        }
-    }, [currentIndex]);
+        resetTimeout();
+        timeoutRef.current = setTimeout(
+            () =>
+                setIndex((prevIndex) =>
+                    prevIndex === images.length - 1 ? 0 : prevIndex + 1
+                ),
+            slowdownFirstAndLastImage(index, delay)
+        );
+        return () => {
+            resetTimeout();
+        };
+    }, [index]);
 
     return (
-        <div>
-            {/* <button onClick={moveNext} className={'p-8 bg-red-100'}>Next</button> */}
-            <h2 className="text-4xl font-semibold mb-12 pt-4 text-c-blue text-center">
-                {title}
-            </h2>
+        <div className="max-w-80 overflow-hidden mx-auto">
             <div
-                ref={carousel}
-                className="carousel-container flex gap-1 overflow-auto scroll-smooth snap-x snap-mandatory z-0 pointer-events-none"
+                className="transition-all ease-in duration-1000 whitespace-nowrap text-center"
+                style={{ transform: `translate3d(${-index * 100}%, 0, 0)` }}
             >
-                {customers.map(({ id, title }, index) => {
-                    return (
-                        <div
-                            key={index}
-                            className="carousel-item text-center flex w-48 h-48 snap-start border-4"
-                        >
-                            <a
-                                // href={resource.link}
-                                className="h-full w-full flex items-center justify-center aspect-square bg-origin-padding bg-left-top bg-cover bg-no-repeat z-0 text-white"
-                            >
-                                <Image src={Antares} alt={'Logo de Antares'} />
-                            </a>
-                        </div>
-                    );
-                })}
+                {images.map(({ src, alt }, index) => (
+                    <div
+                        className="w-80 inline-block drop-shadow-2xl"
+                        key={index}
+                    >
+                        <Image src={src} alt={alt} className={'rounded-lg'} />
+                    </div>
+                ))}
             </div>
         </div>
     );
